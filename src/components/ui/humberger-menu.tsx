@@ -180,7 +180,6 @@ export function HamburgerMenu() {
                     <motion.li variants={menuItemVariants}>
                       <a
                         href="#about"
-                        target="_blank"
                         className="group text-xl flex items-center gap-3 text-neutral-100"
                       >
                         <span className="size-3.5 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all bg-blue-500 text-white">
@@ -206,7 +205,6 @@ export function HamburgerMenu() {
                     <motion.li variants={menuItemVariants}>
                       <a
                         href="#skills"
-                        target="_blank"
                         className="group text-xl flex items-center gap-3 text-neutral-100"
                       >
                         <span className="size-3.5 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all bg-indigo-500 text-white">
@@ -232,7 +230,6 @@ export function HamburgerMenu() {
                     <motion.li variants={menuItemVariants}>
                       <a
                         href="#experience"
-                        target="_blank"
                         className="group text-xl flex items-center gap-3 text-neutral-100"
                       >
                         <span className="size-3.5 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all bg-indigo-500 text-white">
@@ -283,7 +280,6 @@ export function HamburgerMenu() {
                     <motion.li variants={menuItemVariants}>
                       <a
                         href="#contact"
-                        target="_blank"
                         className="group text-xl flex items-center gap-3 text-neutral-100"
                       >
                         <span className="size-3.5 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all bg-purple-500 text-white">
