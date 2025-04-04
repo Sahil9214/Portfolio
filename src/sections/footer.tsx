@@ -130,7 +130,7 @@ function InteractiveFooter() {
       window.removeEventListener("resize", setCanvasSize);
       canvas.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [mousePosition.x, mousePosition.y]);
 
   return (
     <footer

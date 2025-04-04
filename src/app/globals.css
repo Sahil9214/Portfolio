@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "./styles/circuluartext.css";
-@import "./styles/locomotive-scroll.css";
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 :root {
@@ -110,4 +109,29 @@ html.has-scroll-dragging {
   to {
     transform: rotate(360deg);
   }
+}
+/* Add to globals.css */
+.scroll-wrapper {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.scroll-content {
+  will-change: transform;
+}
+
+/* Remove any conflicting styles */
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: visible;
+  position: relative;
+  height: auto;
 }

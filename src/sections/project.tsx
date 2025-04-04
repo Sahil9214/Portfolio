@@ -108,7 +108,11 @@ export default function ProjectShowcase() {
               <div
                 key={project.id}
                 id={`project-${project.id}`}
-                ref={(el) => (projectRefs.current[index] = el)}
+                ref={(el) => {
+                  if (el) {
+                    projectRefs.current[index] = el;
+                  }
+                }}
                 className={cn(
                   "project-card flex w-full flex-row transition-all duration-500",
                   activeProject === project.id
@@ -309,7 +313,7 @@ export default function ProjectShowcase() {
       </div>
 
       <Link
-        href="/project"
+        href="/projects"
         className="mt-10 flex justify-center gap-2 text-neutral-300 transition-colors hover:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-white/20 rounded-md md:mt-16"
         aria-label="See more projects"
       >

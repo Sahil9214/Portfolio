@@ -1,8 +1,8 @@
 "use client";
 
 import { GetStartedButton } from "@/components/ui/get-started-button";
+import { useGsapScrollTrigger } from "@/hooks/useGsapScrollTrigger";
 import { EMAIL, NAME } from "@/utils/constant";
-import { motion } from "framer-motion";
 import { BackgroundBeams } from "../components/ui/background-beam";
 import { HamburgerMenu } from "../components/ui/humberger-menu";
 
@@ -18,6 +18,66 @@ const scrollStyles = `
 `;
 
 export function HeroSection() {
+  // GSAP animations for heading
+  const headingRef = useGsapScrollTrigger<HTMLHeadingElement>(
+    (element, gsap) => {
+      gsap.fromTo(
+        element,
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+      );
+    },
+    {
+      start: "top 80%",
+      end: "bottom 20%",
+      toggleActions: "play none none reverse",
+    }
+  );
+
+  // GSAP animations for stats section
+  const statsRef = useGsapScrollTrigger<HTMLDivElement>(
+    (element, gsap) => {
+      gsap.fromTo(
+        element.querySelectorAll(".stat-item"),
+        { x: 50, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power2.out",
+        }
+      );
+    },
+    {
+      start: "top 70%",
+      end: "bottom 30%",
+      toggleActions: "play none none reverse",
+    }
+  );
+
+  // GSAP animations for intro text
+  const introRef = useGsapScrollTrigger<HTMLDivElement>(
+    (element, gsap) => {
+      gsap.fromTo(
+        element,
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.3,
+          ease: "power2.out",
+        }
+      );
+    },
+    {
+      start: "top 75%",
+      end: "bottom 25%",
+      toggleActions: "play none none reverse",
+    }
+  );
+
   return (
     <div className="h-screen w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased font-['Roboto_Flex',system-ui,sans-serif]">
       {/* Inject styles */}
@@ -33,28 +93,20 @@ export function HeroSection() {
         data-scroll // Enable smooth scroll on this section
       >
         <div className="md:max-w-2xl">
-          {/* Main heading with animation */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          {/* Main heading with GSAP animation */}
+          <h1
+            ref={headingRef}
             className="text-5xl md:text-7xl font-bold mb-4 md:mb-6 hero-heading font-['Roboto_Flex','Roboto Flex Fallback','Roboto Flex F']"
-            data-scroll // Smooth scroll effect
-            data-scroll-speed="2" // Adjust speed of heading
           >
             <span className="text-green-400">FULL STACK</span>
             <br />
             <span className="text-neutral-200 ml-4">DEVELOPER</span>
-          </motion.h1>
+          </h1>
 
-          {/* Introduction text */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          {/* Introduction text with GSAP animation */}
+          <div
+            ref={introRef}
             className="font-['Roboto_Flex','Roboto Flex Fallback','Roboto Flex F']"
-            data-scroll
-            data-scroll-speed="1"
           >
             <p className="text-neutral-400 text-lg mb-6">
               Hi! I&apos;m <span className="text-neutral-200">{NAME}</span>. A
@@ -64,83 +116,52 @@ export function HeroSection() {
 
             {/* Hire me button */}
             <GetStartedButton name="HIRE ME" />
-          </motion.div>
+          </div>
         </div>
 
-        {/* Stats section - desktop */}
+        {/* Stats section - desktop with GSAP animation */}
         <div
+          ref={statsRef}
           className="hidden md:flex flex-col items-end gap-8 mt-8 md:mt-0 stats-section"
-          data-scroll
-          data-scroll-speed="3"
         >
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col items-end stat-item"
-          >
+          <div className="flex flex-col items-end stat-item">
             <span className="text-green-400 text-6xl font-bold">1.5+</span>
             <span className="text-neutral-400">Years of Experience</span>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col items-end stat-item"
-          >
+          <div className="flex flex-col items-end stat-item">
             <span className="text-green-400 text-6xl font-bold">7+</span>
             <span className="text-neutral-400">Completed Projects</span>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-col items-end stat-item"
-          >
+          <div className="flex flex-col items-end stat-item">
             <span className="text-green-400 text-6xl font-bold">10K+</span>
             <span className="text-neutral-400">Hours Worked</span>
-          </motion.div>
+          </div>
         </div>
 
-        {/* Stats section - mobile */}
+        {/* Stats section - mobile with GSAP animation (using same ref) */}
         <div
           className="flex md:hidden justify-between w-full mt-12 stats-section"
-          data-scroll
-          data-scroll-speed="2"
+          aria-hidden="true"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col items-center stat-item"
-          >
+          {/* Mobile stats content (same as original) */}
+          <div className="flex flex-col items-center stat-item">
             <span className="text-green-400 text-3xl font-bold">1.5+</span>
             <span className="text-neutral-400 text-xs">
               Years of Experience
             </span>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col items-center stat-item"
-          >
+          <div className="flex flex-col items-center stat-item">
             <span className="text-green-400 text-3xl font-bold">7+</span>
             <span className="text-neutral-400 text-xs">Completed Projects</span>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-col items-center stat-item"
-          >
+          <div className="flex flex-col items-center stat-item">
             <span className="text-green-400 text-3xl font-bold">10K+</span>
             <span className="text-neutral-400 text-xs">Hours Worked</span>
-          </motion.div>
+          </div>
         </div>
       </div>
       <div className="max-xl:hidden fixed bottom-32 left-0 block z-10">
