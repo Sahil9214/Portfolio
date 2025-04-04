@@ -1,3 +1,4 @@
+import { GsapProvider } from "@/context/gsapContext";
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
@@ -20,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoFlex.variable} antialiased`}>{children}</body>
+      <body className={`${robotoFlex.variable} antialiased`}>
+        <GsapProvider>{children}</GsapProvider>
+      </body>
     </html>
   );
 }

@@ -1,21 +1,20 @@
 "use client";
 
 import CircularText from "@/components/ui/circuluartext";
+import { ScrollAnimation } from "@/components/ui/scroll-animations";
 import { DESCRIPTION, NAME } from "@/utils/constant";
-import { motion } from "framer-motion";
+
 export default function About() {
   return (
     <section
-      className="min-h-screen w-full  bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
+      className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
       id="about"
     >
-      <div className="max-w-7xl w-full mx-auto px-4 md:px-6 relative  z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-16 md:mb-10 max-w-7xl  md:ml-auto md:mr-0 "
+      <div className="max-w-7xl w-full mx-auto px-4 md:px-6 relative z-10">
+        <ScrollAnimation
+          animation="fadeUp"
+          className="mb-16 md:mb-10 max-w-7xl md:ml-auto md:mr-0"
+          duration={0.6}
         >
           <div className="flex flex-col lg:flex-row items-start">
             <CircularText
@@ -28,39 +27,34 @@ export default function About() {
               {DESCRIPTION}
             </h2>
           </div>
-        </motion.div>
+        </ScrollAnimation>
+
         {/* "This is me" with line */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        <ScrollAnimation
+          animation="fadeIn"
           className="mb-10"
+          duration={0.6}
+          delay={0.2}
         >
           <p className="text-neutral-500 mb-3">This is me.</p>
           <div className="h-px bg-neutral-800 w-full"></div>
-        </motion.div>{" "}
+        </ScrollAnimation>
+
         {/* About content */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-16">
           {/* Name heading */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
+          <ScrollAnimation animation="fadeLeft" duration={0.6} delay={0.3}>
             <h3 className="text-3xl md:text-4xl lg:text-5xl text-neutral-200 font-medium mb-6">
               Hi, I&apos;m {NAME}.
             </h3>
-          </motion.div>
+          </ScrollAnimation>
 
           {/* Description paragraphs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
+          <ScrollAnimation
+            animation="fadeRight"
             className="space-y-6"
+            duration={0.6}
+            delay={0.4}
           >
             <p className="text-neutral-400 leading-relaxed">
               I&lsquo;m a Full Stack Web developer dedicated to turning ideas
@@ -75,9 +69,10 @@ export default function About() {
               strive to deliver experiences that not only engage users but also
               drive tangible results.
             </p>
-          </motion.div>
+          </ScrollAnimation>
         </div>
       </div>
+
       {/* Background particles/dots effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
