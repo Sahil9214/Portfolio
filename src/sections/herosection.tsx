@@ -115,7 +115,7 @@ export function HeroSection() {
             </p>
 
             {/* Hire me button */}
-            <GetStartedButton name="HIRE ME" />
+            <GetStartedButton name="Resume Download" />
           </div>
         </div>
 
