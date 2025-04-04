@@ -107,7 +107,7 @@ export const projects = [
       "linear-gradient(188.62deg, #6B0D33 49.9%, #DB2777 81.7%, #F472B6 93.88%, #F9D793 113.5%)",
     shadow: "0 0 30px #DB2777",
     image: "/googleTranslator.png",
-    link: "https://your-translator-link.com",
+    link: "https://translator-google.vercel.app/",
     github: "https://github.com/your-github/google-translator-2.0",
     features: [
       "Powered by Gemini AI for accurate translations.",
