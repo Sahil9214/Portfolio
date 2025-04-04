@@ -148,7 +148,7 @@ function InteractiveFooter() {
 
         <a
           href="mailto:utkarshsinghal369@gmail.com"
-          className="group relative text-3xl sm:text-4xl font-bold inline-block mt-5 mb-10 text-white"
+          className="group relative text-xl lg:text-3xl sm:text-4xl font-bold inline-block mt-5 mb-10 text-white"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
