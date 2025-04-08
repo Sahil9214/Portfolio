@@ -226,23 +226,25 @@ export const projects = [
     ],
   },
   {
-    id: "movie-recommendation",
-    title: "AI-Powered Movie Recommender",
+    id: "linkforge",
+    title: "LinkCut – Secure URL Shortener",
     description:
-      "AI-powered movie recommendation system using a vector database.",
+      "A full-stack URL shortener with authentication and analytics, built for performance and security.",
     fullDescription:
-      "Developed an AI-driven recommendation system that suggests movies based on user preferences using a vector database and Generative AI.",
-    color: "purple",
+      "Developed a robust URL shortening service where users can register, shorten long links, and track analytics. The application is secured using JWT and bcrypt, with a responsive frontend using Next.js and ShadCN UI. Frontend is deployed on Vercel and backend on Render, ensuring scalability and optimal performance.",
+    color: "indigo",
     gradient:
-      "linear-gradient(188.62deg, #3D1A7A 49.9%, #7E22CE 81.7%, #C084FC 93.88%, #F9D793 113.5%)",
-    shadow: "0 0 30px #7E22CE",
-    image: "/movie-recommendation-preview.png",
-    link: "https://your-movie-recommendation-link.com",
-    github: "https://github.com/your-github/movie-recommendation",
+      "linear-gradient(188.62deg, #312E81 49.9%, #6366F1 81.7%, #A5B4FC 93.88%, #F9D793 113.5%)",
+    shadow: "0 0 30px #6366F1",
+    image: "/urlshortner.png", // replace with your actual image path
+    link: "https://url-shortner-web.vercel.app/", // replace with actual deployed link
+    github: "https://github.com/Sahil9214/url-shortner",
     features: [
-      "Auto-recommendation using Generative AI.",
-      "Leverages a vector database for accurate suggestions.",
-      "User-friendly interface for personalized movie recommendations.",
+      "User authentication with JWT and bcrypt.",
+      "Shorten long URLs with custom aliases.",
+      "Track number of visits and link creation date.",
+      "Secure backend with Express and MongoDB.",
+      "Responsive UI with Next.js, Tailwind, and ShadCN.",
     ],
     technologies: [
       {
@@ -262,12 +264,36 @@ export const projects = [
         icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75",
       },
       {
-        name: "Vector Database",
-        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABN0lEQVRIie2SPc6CQBCGZ4efbAIJDYmVjYUnsKSxt7GgUEvCNbgEobTSeARi4SmIgcTCGgpiQdAQFvkKCDGfmEhls081+85kZt7NAHA4HM7vIb3qbrdTFIWQNksIKcvSNM2uwHXd8Xj8fD6bpyRJx+PR87z3VmLvgNVqFcdxkiTdDES83++TySSO4yiKNE3LsqyrlyQpCIIBvhhjjuP8E+u6XiwWTTCbzb5s1e8AACil72JVVQCQpul2u73dbo0/RLxcLpZl9fbBLxd5Rdf16/VKKZVlWZZlRJzP51EUDXNQFMW7KAhCEyyXy1d9s9ns9/thA9brtWEYiK3FJjifzwBwOBym02nzXQBQ1/VoNArDcMAA3/dVVRXFNksIYYx1F/V4PPI8724UEU+nk23bn3blcDicn/MHDOhr8bDbejgAAAAASUVORK5CYII=",
+        name: "Node.js",
+        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75",
       },
       {
-        name: "Generative AI",
-        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC7ElEQVRYhcWWPWsUURSGn3PvxMnXJBFM4QcksVAxXfAniAZ/gaWFFhZqEhTUJCRGUDRq1kILwSZiayFEEBT/gJZ+VBoQFNQiqLNZs3PvsZjd7KqJye5o9sKyd5a973l4z5lzLmRYc7d929xtvzWLhslyuKh0FZWuxgF42elUehsHoOxLlIHGAXgOJZ7BLBpBlsPfYX+kWRQyOHAh50/kUfLAbE5PbTjAN2U6rxADBbi+oQBHZtxkHsIYKLlg7+T0aj1aUuuBwRnX2wbvIqAdoR2IBCKEVth7dEhe16JXmwPnlVj1TZ7U+nINxAoxSgFePshp+H8Abn5n1xb3KYYwD6wCIR/h08MZ3fRvAW4Ue7pcWMhDdxosDVqBYBkij3Z8EBZnc7r7nwB0XU7G25zMLyphTFXgXyD0F4gYNQV4cy+nl9bSX7UIt0+4o0XLzcRqa2IhsYq30EZacO1QKsCqffl3SQu0A2gWlgJh5PBJubUiQN+o3wx0Ar3AAHAAOJgYcFYpB08sFK2C+S3YbxDtCFEVRJRC0GQgEJ42GX0cCC+aDPMCC+VWLKTpCIAQIPCACCqKIijpd4ISm/TPyx9VRKT0rBgEo2Ak3YsCHsQQWiVQqaR+1RT0jfohhSvOsqlYcqDsSNEogYFoBdujKidKPUI7kbPHh2TFRrVmI+oZ81PO6nhi+CMdoVQAUtur9kAHcu36sDnzN/11dcKeMd+XWH2dWMIyQAqktKwMoRH03x+2a3bFdbfiYyhzk/6zM2xZhig5Uv1mRPC1RaT72bBdWo9uTbNgHOXupC8sO2Eqr2dpNmgL0vJqxP5Yr2ZNs+AigvXsCRxYJ1gP1gvi0yb0De2vJXjNAADvp+y8US4EHgIvBB4CJ3jP9JeRppomIdQxjstrx4QrJIawVAdu4VxQ1/Wu7huR9XImTQEETk7Xq5Np9Yx53TbpMl1LM92KjfIkcNLcMADgkfW0NhLgOWnXbRjAW6CjkQALgM8i8BOvpjwT7G/2qQAAAABJRU5ErkJggg==",
+        name: "Express",
+        icon: "https://www.me.toinfinite.dev/logo/express.svg",
+      },
+      {
+        name: "MongoDB",
+        icon: "https://www.me.toinfinite.dev/logo/mongodb.svg",
+      },
+      {
+        name: "JWT",
+        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcEwZGRkZGRkZGRkYGBgZGRkDAwMuLi6NjY3Q0NDy8vL///97e3tnZ2fi4uJKSkqqqqqgNU5tAAAABnRSTlMAJq/y/2Eq/t9kAAAAx0lEQVR4AX3T4RKFEBQEYOFuOND7P+3N7HA0VftLfbMDyRizWedvcXYzZ37+Jb+z51+zGTuGmBlvrHEU7CEmyVlSDDvoztBKlZ5SpKdmKrEJs+/CNEWwIAlIHBXcMADhDSvOYX3GxA2kJ4wgIl7Rt3o0Wtd21OYV9Vz0SZsSw2AgRLk0+3oKdHFYMXKJw+JE3WgfcpsTtXoAxywSmfVs+UYRTb9Kw4I6bSmcUHHp5szeQKfqawjVqzlesMkgMfbzan5e6s/f4Q+W3BLBzhB6zgAAAABJRU5ErkJggg==", // replace with your JWT icon or placeholder
+      },
+      {
+        name: "Bcrypt",
+        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACgElEQVR4Ad2XA7PkUBCFp/aPrG3btm3btm0U1rZt27btiY2z6dV48ZLHryrupM9Fnb7x+cYgVdolzIg0S76+T7PEj4TYKBflpNw+OqGbibF9F+G+5e56wkcnibklPwFpna3OTg4TL0pYc0/FtscqNjxQseC6jN7HRRRax3otIJC43wkRz1gTf8Kygf3PNRTfwHonIOcqBide6/gfvsgWym9m3QvItMyPqx8NEF8VC4tuKWi6l0fe1QyoVzIv96PqNg5037QRwtUPhnsBHQ4JeMKYGH9BQtYVP+5V2sph+mU5InbSRRnhlNnEejsJS21kwak2RN2OeJZvDYNw2h4QvBVw9KUOwq9ECsjoDFc4zfbx3gmovp3DLx74zYjnFbewCEYxbORcyXgnYN19Fb/Y81QD3cu1ikG1bRwqbGFDnhMzr8je+UAGp3sZNTDNpzqTcNApEYaFCEwbjjEpSOulETXZwyOYlvt5zL4qIxofJIvivXXC+dcDyWwbyL3qhw80chINPi2iz3ERF94bgV6wQPe8E3Ax8HHyhagx5TazsBFAM21yQ/cC0i/1QzYCn97ySIsVG1ErVt9T3Qsou5lFEDT2MWNPv9ERzI1PhnsBNOGCGXNOihUbUbSoR1wL6HVMRBBUlqPGpXOG6p1oIZg7X1z0wKEXOnVhyAQk2h+M7u9jz0sIg6pk3AVMuSQjGlQJS2xgqcU0QVFtO0erItg2QqB6UWitSysefEqEP+CAEY5n2YgK67zTYDfvjQ/kWMlg1DmJFibhCSPQnQBaJxZbz8bPorSA06VdjwiYd012/EDFbqcobXaO5P3djwrIs5pJ0cty77dE/zVL9J/TRP89/wYoHplyX4z7pQAAAABJRU5ErkJggg==", // replace with your bcrypt icon or placeholder
+      },
+      {
+        name: "ShadCN UI",
+        icon: "https://www.shadcnblocks.com/images/block/block-1.svg", // add or replace with valid icon
+      },
+      {
+        name: "Vercel",
+        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAAAeklEQVR4Ae3KsQnAIBQE0FtJcBh3cRJbITvYOIRLuILl5WMVCAmqQgj4qv/vDtv2jaPCWqywUAiBlRxYQmvNC6UU5qWUeCEvJhljeCMhZuSceSMhhllr+UAqjCml8IFUGOCc4ysZoBcboEuMkQ1khnbee9dAZti2vzoBA1oc6SnKeswAAAAASUVORK5CYII=",
+      },
+      {
+        name: "Render",
+        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4AWJwL/ABtF8HJxCDQBSGT6kh121kWrAFe7ADK0kZtmATW4QVzL6DgSUQSZ4jgeDAd/aPyEAe9a4AjEAC/ZNAhgfsBzfkYQGYDHrB1zQAs4AHvSGa3gCmgN5heQMrKEGsAhwZ4K0CNjLAWQUo6UMEmH196X6EGAHtuv6Kfnik7XQRYWTUtVehuYr3VQkRHEgVIF1Zs5APEgRY6jntAFKBlX7MBgH04RYBmT/cJiDNgBkwA2bAqwIiwc+f014/Ki3k6gX4gg8AAAAASUVORK5CYII=",
       },
     ],
   },
