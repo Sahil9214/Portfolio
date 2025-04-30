@@ -10,38 +10,55 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-  title: "UTkarsh Portfolio | Professional Web Developer & Software Engineer",
+  title: {
+    default: "Utkarsh Dev | Professional Web Developer & Software Engineer",
+    template: "%s | Utkarsh Dev", // For dynamic page titles
+  },
   description:
-    "Explore UTkarsh's professional portfolio showcasing web development projects, software engineering expertise, and technical skills. View my latest work in React, Next.js, full-stack development and more.",
+    "Explore Utkarsh's professional portfolio showcasing web development projects, software engineering expertise, and technical skills in React, Next.js, and more.",
+  keywords: [
+    "Utkarsh Singhal",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Web Developer India",
+  ],
+  openGraph: {
+    title: "Utkarsh Dev | Professional Web Developer & Software Engineer",
+    description:
+      "Explore Utkarsh's professional portfolio showcasing web development projects, software engineering expertise, and technical skills in React, Next.js,Node.js , Database and more.",
+    url: "https://utkarsh-work.vercel.app/", // Replace with your portfolio URL
+    siteName: "Utkarsh Dev",
+    images: [
+      {
+        url: "https://ibb.co/S4ttx4Zy",
+        width: 800,
+        height: 800,
+        alt: "Utkarsh Singhal - Full Stack Developer",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Utkarsh Dev | Professional Web Developer & Software Engineer",
+    description:
+      "Explore Utkarsh's professional portfolio showcasing web development projects, software engineering expertise, and technical skills in React, Next.js,Node.js,Database and more.",
+    images: ["https://ibb.co/S4ttx4Zy"],
+    site: "https://utkarsh-work.vercel.app/",
+  },
   icons: {
     icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "32x32",
-        type: "image/x-icon",
-      },
-      {
-        url: "/favicon-16x16.png",
-        sizes: "16x16",
-        type: "image/png",
-      },
-      {
-        url: "/favicon-32x32.png",
-        sizes: "32x32",
-        type: "image/png",
-      },
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: {
       url: "/apple-touch-icon.png",
       sizes: "180x180",
       type: "image/png",
     },
-    other: [
-      {
-        rel: "manifest",
-        url: "/site.webmanifest",
-      },
-    ],
+    other: [{ rel: "manifest", url: "/site.webmanifest" }],
   },
 };
 
