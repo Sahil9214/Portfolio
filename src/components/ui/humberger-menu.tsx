@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 export function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useMobile();
+  const isMobile = useMobile(1024);
   // Close menu when escape key is pressed
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
