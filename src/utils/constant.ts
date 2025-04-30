@@ -114,6 +114,7 @@ export const projects = [
       "Supports text-to-speech and speech-to-text.",
       "User-friendly UI with seamless multi-language selection.",
     ],
+    alt: "Google Translator 2.0 image",
     technologies: [
       {
         name: "Next.js",
@@ -155,6 +156,7 @@ export const projects = [
     image: "/neuralhq.png",
     link: "https://www.neuralhq.ai/",
     github: "",
+    alt: "NeuralHq Corporate  Website",
     features: [
       "High-performance, modern UI.",
       "SEO-optimized with fast load times.",
@@ -198,6 +200,7 @@ export const projects = [
       "Implemented real-time search and booking.",
       "Optimized for performance and usability.",
     ],
+    alt: "Booking.com Clone website image",
     technologies: [
       {
         name: "Next.js",
@@ -246,6 +249,7 @@ export const projects = [
       "Secure backend with Express and MongoDB.",
       "Responsive UI with Next.js, Tailwind, and ShadCN.",
     ],
+    alt: "LinkCut – Secure URL Shortener website image ",
     technologies: [
       {
         name: "Next.js",
@@ -298,3 +302,5 @@ export const projects = [
     ],
   },
 ];
+
+// PROJECT DATA

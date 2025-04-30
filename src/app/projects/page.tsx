@@ -1,12 +1,17 @@
 "use client";
 
+import { ProjectsProvider } from "@/context/projectContext";
 import Footer from "@/sections/footer";
+import { projectsData } from "@/utils/projectConstant";
+import ProjectsLayout from "./pojectLayout";
 
 export default function Projects() {
   return (
     <div>
-      <h1>Ram Ram bhai sare ne</h1>
-      <Footer />
+      <ProjectsProvider initialProjects={projectsData}>
+        <ProjectsLayout />
+        <Footer />
+      </ProjectsProvider>
     </div>
   );
 }
