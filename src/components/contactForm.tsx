@@ -3,7 +3,6 @@
 
 import type React from "react";
 
-import AnimatedRing from "@/components/ui/animatedRing";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -71,7 +70,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl items-center min-h-screen mx-auto p-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl items-center mx-auto p-6 py-16">
       <Toaster />
 
       {/* Left side - Form */}
@@ -204,9 +203,6 @@ export default function ContactForm() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="absolute z-0">
-          <AnimatedRing />
-        </div>
         <div className="relative z-10 text-center p-8">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -245,7 +241,6 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
           >
-            {/* Social icons could go here */}
             <div className="w-10 h-10 rounded-full bg-green-400 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"></div>
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"></div>
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center cursor-pointer hover:scale-110 transition-transform duration-300"></div>

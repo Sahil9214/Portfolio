@@ -7,7 +7,7 @@ import { DESCRIPTION, NAME } from "@/utils/constant";
 export default function About() {
   return (
     <section
-      className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
+      className="w-full bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
       id="about"
     >
       <div className="max-w-7xl w-full mx-auto px-4 md:px-6 relative z-10">

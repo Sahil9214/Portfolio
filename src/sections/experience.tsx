@@ -5,7 +5,7 @@ import Image from "next/image";
 const Experience = () => {
   return (
     <section
-      className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center "
+      className=" w-full bg-neutral-950 relative flex flex-col items-center justify-center "
       id="experience"
     >
       <TimelineDemo />
@@ -124,7 +124,7 @@ export function TimelineDemo() {
     },
   ];
   return (
-    <div className="min-h-screen w-full" id="experience">
+    <div className="w-full" id="experience">
       <div className="w-full">
         <Timeline data={data} />
       </div>

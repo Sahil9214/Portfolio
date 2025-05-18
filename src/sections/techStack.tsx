@@ -10,7 +10,7 @@ const TechStack = () => {
   return (
     <section
       id="skills"
-      className="min-h-screen w-full bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
+      className=" w-full bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
     >
       <div className="container mx-auto px-4 max-w-7xl">
         <motion.div
@@ -101,7 +101,7 @@ const CategorySection = ({
       custom={index}
     >
       <motion.div className="sm:col-span-5" variants={categoryVariants}>
-        <p className="category-title text-5xl font-anton leading-none text-muted-foreground uppercase">
+        <p className="category-title text-3xl   xl:text-5xl font-anton leading-none text-muted-foreground uppercase">
           {category}
         </p>
       </motion.div>
@@ -110,7 +110,7 @@ const CategorySection = ({
         {items.map((item, i) => (
           <motion.div
             key={item.name}
-            className="tech-item flex gap-3.5 items-center leading-none"
+            className="tech-item flex gap-3.5 items-center mt-2 leading-none"
             variants={itemVariants}
             custom={i}
             whileHover={{
@@ -118,7 +118,7 @@ const CategorySection = ({
               transition: { duration: 0.2 },
             }}
           >
-            <div className="relative overflow-hidden rounded-md">
+            <div className="relative overflow-hidden rounded-md ">
               <Image
                 src={item.logo}
                 alt={item.name}
