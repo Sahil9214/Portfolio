@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://utkarsh-work.vercel.app/sitemap.xml
