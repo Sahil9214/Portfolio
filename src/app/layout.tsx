@@ -1,5 +1,6 @@
 import { GsapProvider } from "@/context/gsapContext";
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
@@ -69,6 +70,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="PNuI7BQmbGJ9mkygjTPjkjhU9yMfUOqWFaZfNsfIShw"
+        />{" "}
+      </Head>
       <body className={`${robotoFlex.variable} antialiased`}>
         <GsapProvider>{children}</GsapProvider>
       </body>
