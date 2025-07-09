@@ -6,7 +6,7 @@ export const useMobile = (breakpoint: number) => {
 
   useEffect(() => {
     setIsMobile(window.innerWidth < breakpoint);
-  }, []);
+  }, [breakpoint]);
 
   return isMobile;
 };

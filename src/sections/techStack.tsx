@@ -73,7 +73,7 @@ const CategorySection = ({
       x: 0,
       transition: {
         duration: 0.7,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -86,7 +86,7 @@ const CategorySection = ({
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };

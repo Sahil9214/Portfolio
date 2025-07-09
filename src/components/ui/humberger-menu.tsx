@@ -3,9 +3,11 @@
 import { useMobile } from "@/hooks/use-mobile";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+
 export function HamburgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useMobile(1024);
+
   // Close menu when escape key is pressed
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -40,7 +42,7 @@ export function HamburgerMenu() {
       opacity: 1,
       width: "350px", // Explicit width in animate state
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 200,
         damping: 20,
         mass: 0.8,
@@ -52,12 +54,13 @@ export function HamburgerMenu() {
       opacity: 0,
       width: isMobile ? "100vw" : "90vw", // Explicit width in exit state
       transition: {
-        type: "tween",
-        ease: "easeInOut",
+        type: "tween" as const,
+        ease: "easeInOut" as const,
         duration: 0.3,
       },
     },
   };
+
   // Menu items animation (stagger effect)
   const menuItemVariants = {
     initial: { opacity: 0, y: 20 },
@@ -86,6 +89,7 @@ export function HamburgerMenu() {
           ></motion.span>
         </div>
       </button>
+
       {/* Menu Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -201,63 +205,13 @@ export function HamburgerMenu() {
                         </span>
                         About
                       </a>
-                    </motion.li>{" "}
-                    <motion.li variants={menuItemVariants}>
-                      <a
-                        href="#skills"
-                        className="group text-xl flex items-center gap-3 text-neutral-100"
-                      >
-                        <span className="size-3.5 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all bg-indigo-500 text-white">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="8"
-                            height="8"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-move-up-right scale-0 group-hover:scale-100 transition-all"
-                          >
-                            <path d="M13 5H19V11"></path>
-                            <path d="M19 5L5 19"></path>
-                          </svg>
-                        </span>
-                        Skills
-                      </a>
-                    </motion.li>
-                    <motion.li variants={menuItemVariants}>
-                      <a
-                        href="#experience"
-                        className="group text-xl flex items-center gap-3 text-neutral-100"
-                      >
-                        <span className="size-3.5 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all bg-indigo-500 text-white">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="8"
-                            height="8"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="lucide lucide-move-up-right scale-0 group-hover:scale-100 transition-all"
-                          >
-                            <path d="M13 5H19V11"></path>
-                            <path d="M19 5L5 19"></path>
-                          </svg>
-                        </span>
-                        Experience
-                      </a>
                     </motion.li>
                     <motion.li variants={menuItemVariants}>
                       <a
                         href="#projects"
                         className="group text-xl flex items-center gap-3 text-neutral-100"
                       >
-                        <span className="size-3.5 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all bg-teal-500 text-black">
+                        <span className="size-3.5 rounded-full flex items-center justify-center group-hover:scale-[200%] transition-all bg-green-500 text-white">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="8"
@@ -305,17 +259,6 @@ export function HamburgerMenu() {
                   </motion.ul>
                 </div>
               </div>
-            </div>
-
-            {/* Get in Touch Section */}
-            <div className="w-full max-w-[300px] mx-8 sm:mx-auto pb-10">
-              <p className="text-neutral-400 mb-4">GET IN TOUCH</p>
-              <a
-                href="mailto:utkarshsinghal369@gmail.com"
-                className="text-neutral-100 hover:text-green-400 transition-colors"
-              >
-                utkarshsinghal369@gmail.com
-              </a>
             </div>
           </motion.div>
         )}

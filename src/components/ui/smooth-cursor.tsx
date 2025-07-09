@@ -156,9 +156,7 @@ const UtkarshCursor: FC<{ isMoving: boolean; velocity: Position }> = ({ isMoving
 }
 
 // Morphing Blob Cursor with Name
-const MorphingBlobCursor: FC<{ isMoving: boolean; velocity: Position }> = ({ isMoving, velocity }) => {
-  const speed = Math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y)
-
+const MorphingBlobCursor: FC<{ isMoving: boolean; velocity: Position }> = ({ isMoving }) => {
   return (
     <div className="relative">
       {/* Morphing Blob */}
@@ -213,7 +211,6 @@ const MorphingBlobCursor: FC<{ isMoving: boolean; velocity: Position }> = ({ isM
 }
 
 export function SmoothCursor({
-  cursor = <UtkarshCursor isMoving={false} velocity={{ x: 0, y: 0 }} />,
   springConfig = {
     damping: 45,
     stiffness: 400,
