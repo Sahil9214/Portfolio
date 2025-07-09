@@ -164,3 +164,90 @@ body {
   position: relative;
   height: auto;
 }
+
+.toolTip {
+  position: relative;
+  cursor: pointer;
+}
+
+.toolTip::after {
+  content: "Coming Soon...";
+  position: absolute;
+  top: -180%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: #23df68; /* bg-green-400 */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);
+}
+
+/* Arrow pointing down to the element */
+.toolTip::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #4ade80; /* bg-green-400 */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1000;
+}
+
+.toolTip:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toolTip:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Cool pop animation variants */
+.toolTip.bounce::after {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateX(-50%) translateY(15px) scale(0.8);
+}
+
+.toolTip.bounce:hover::after {
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.toolTip.bounce::before {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateX(-50%) scale(0.8);
+}
+
+.toolTip.bounce:hover::before {
+  transform: translateX(-50%) scale(1);
+}
+
+/* Glow effect variant */
+.toolTip.glow:hover::after {
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.4),
+    0 0 20px rgba(74, 222, 128, 0.2);
+}
+
+/* Slide up variant */
+.toolTip.slideUp::after {
+  transform: translateX(-50%) translateY(20px);
+  transition: all 0.3s ease-out;
+}
+
+.toolTip.slideUp:hover::after {
+  transform: translateX(-50%) translateY(0);
+}
