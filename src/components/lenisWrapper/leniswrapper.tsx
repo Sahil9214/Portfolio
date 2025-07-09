@@ -35,7 +35,7 @@ const LenisWrapper = ({ children }: { children: React.ReactNode }) => {
     }, []); // Empty dependency array to run only once
 
     return (
-        <div className="bg-neutral-950 lenis-wrapper hide-scrollbar">
+        <div className="bg-neutral-950 lenis-wrapper hide-scrollbar smooth-cursor-active">
             <div className="lenis-content">
                 {children}
             </div>

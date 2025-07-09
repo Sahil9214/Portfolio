@@ -7,23 +7,23 @@ import { DESCRIPTION, NAME } from "@/utils/constant";
 export default function About() {
   return (
     <section
-      className="w-full bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
+      className="w-full  bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
       id="about"
     >
-      <div className="max-w-7xl w-full mx-auto px-4 md:px-6 relative z-10">
+      <div className="max-w-[1280px] w-full  mx-auto px-4 md:px-0 relative z-10">
         <ScrollAnimation
           animation="fadeUp"
-          className="mb-16 md:mb-10 max-w-7xl md:ml-auto md:mr-0"
+          className="mb-16 md:mb-10  md:ml-auto md:mr-0"
           duration={0.6}
         >
-          <div className="flex flex-col lg:flex-row items-start">
+          <div className="flex flex-col lg:flex-row items-start justify-between">
             <CircularText
               text="ABOUT*ME*MORE*"
               onHover="speedUp"
               spinDuration={20}
               className="custom-class"
             />
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-neutral-200 font-anton leading-tight w-full">
+            <h2 className="text-3xl  md:text-4xl lg:text-5xl text-neutral-200 font-anton leading-tight w-full">
               {DESCRIPTION}
             </h2>
           </div>

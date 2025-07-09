@@ -7,7 +7,6 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-// Project data
 
 export default function ProjectShowcase() {
   const [activeProject, setActiveProject] = useState(projects[0].id);
@@ -15,36 +14,77 @@ export default function ProjectShowcase() {
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    // Optimize observer with a single instance
+    // Initialize refs array
+    projectRefs.current = projectRefs.current.slice(0, projects.length);
+
     const observerOptions = {
       root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
+      rootMargin: "-20% 0px -20% 0px", // Adjust threshold for better detection
+      threshold: [0, 0.25, 0.5, 0.75, 1],
     };
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
           const id = entry.target.id.replace("project-", "");
+          console.log("Setting active project:", id); // Debug log
           setActiveProject(id);
         }
       });
     };
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
-    );
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
 
-    // Only observe valid refs
+    // Observe all project refs
     projectRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
+      if (ref) {
+        observer.observe(ref);
+        console.log("Observing:", ref.id); // Debug log
+      }
     });
+
+    // Manual scroll handler as fallback
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      projectRefs.current.forEach((ref, index) => {
+        if (ref) {
+          const rect = ref.getBoundingClientRect();
+          const elementTop = rect.top + scrollY;
+          const elementBottom = elementTop + rect.height;
+
+          // Check if element is in viewport
+          if (scrollY + windowHeight * 0.3 >= elementTop && scrollY + windowHeight * 0.7 <= elementBottom) {
+            const projectId = projects[index]?.id;
+            if (projectId && activeProject !== projectId) {
+              console.log("Manual scroll setting active project:", projectId);
+              setActiveProject(projectId);
+            }
+          }
+        }
+      });
+    };
+
+    // Add scroll listener with throttling
+    let ticking = false;
+    const throttledScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', throttledScroll);
 
     return () => {
       observer.disconnect();
+      window.removeEventListener('scroll', throttledScroll);
     };
-  }, []);
+  }, [activeProject]);
 
   // Map color names to actual Tailwind classes for safety
   const getColorClasses = (colorName: string) => {
@@ -72,6 +112,16 @@ export default function ProjectShowcase() {
         text: "text-pink-400",
         border: "border-pink-600",
       },
+      red: {
+        bg: "bg-red-600/20",
+        text: "text-red-400",
+        border: "border-red-600",
+      },
+      emerald: {
+        bg: "bg-emerald-600/20",
+        text: "text-emerald-400",
+        border: "border-emerald-600",
+      },
       // Add other colors as needed
     };
 
@@ -97,7 +147,6 @@ export default function ProjectShowcase() {
           My Curated Work(Projects)
         </h2>
       </div>
-
       <div className="relative mx-auto mt-10 flex w-full flex-col lg:flex-row">
         {/* Main scrollable content */}
         <div className="mx-auto flex max-w-2xl flex-col gap-y-6 md:gap-y-24 lg:max-w-[65%]">
@@ -109,15 +158,13 @@ export default function ProjectShowcase() {
                 key={project.id}
                 id={`project-${project.id}`}
                 ref={(el) => {
-                  if (el) {
-                    projectRefs.current[index] = el;
-                  }
+                  projectRefs.current[index] = el;
                 }}
                 className={cn(
                   "project-card flex w-full flex-row transition-all duration-500",
                   activeProject === project.id
                     ? "opacity-100 scale-100"
-                    : "opacity-0 scale-[0.8]"
+                    : "opacity-60 scale-[0.95]"
                 )}
               >
                 <div className="flex flex-col lg:mx-10 lg:w-full">
@@ -172,7 +219,7 @@ export default function ProjectShowcase() {
                       </h2>
                       <div
                         aria-hidden="true"
-                        className={`ml-3 h-1 min-w-6 rounded-full ${project.color}`}
+                        className={`ml-3 h-1 min-w-6 rounded-full ${colorClasses.border}`}
                       ></div>
                     </div>
                     <p className="text-muted-foreground mt-2 text-sm">
@@ -229,10 +276,10 @@ export default function ProjectShowcase() {
                 <div
                   key={project.id}
                   className={cn(
-                    "transition-opacity duration-500",
+                    "transition-all duration-500",
                     activeProject === project.id
-                      ? "opacity-100"
-                      : "opacity-0 hidden"
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-4 pointer-events-none absolute top-0"
                   )}
                   aria-hidden={activeProject !== project.id}
                 >
@@ -339,5 +386,3 @@ export default function ProjectShowcase() {
     </section>
   );
 }
-
-// Animated letters component for the heading

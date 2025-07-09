@@ -1,5 +1,6 @@
 import ContactForm from "@/components/contactForm";
 import LenisWrapper from "@/components/lenisWrapper/leniswrapper";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import About from "@/sections/about";
 import Experience from "@/sections/experience";
 import Footer from "@/sections/footer";
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <LenisWrapper >
       <SEO seo={PersonalSEOContent} />
-
+      <SmoothCursor />
       <Navbar />
       <HeroSection />
       <About />

@@ -3,7 +3,6 @@
 @import "./styles/circuluartext.css";
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import "lenis/dist/lenis.css";
-
 :root {
   --font-roboto-flex: "Roboto Flex", "Roboto Flex Fallback";
 }
@@ -47,37 +46,11 @@ html::-webkit-scrollbar {
 
 html {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: n one; /* Firefox */
 }
 
-/* For webkit browsers (Chrome, Safari, Edge) */
+/* For webkit browsers (Chrome,  Safari, Edge) */
 ::-webkit-scrollbar {
-  display: none;
-}
-
-/* Custom class for hiding scrollbars */
-.hide-scrollbar {
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
-}
-
-/* Lenis specific scrollbar hiding */
-.lenis-wrapper {
-  overflow: hidden;
-}
-
-.lenis-content {
-  overflow-y: auto;
-  overflow-x: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.lenis-content::-webkit-scrollbar {
   display: none;
 }
 
