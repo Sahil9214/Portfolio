@@ -313,7 +313,7 @@ export default function ProjectShowcase() {
       </div>
 
       <Link
-        href="#"
+        href="/projects"
         className="mt-10 flex justify-center gap-2 text-neutral-300 transition-colors hover:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-white/20 rounded-md md:mt-16"
         aria-label="See more projects"
       >

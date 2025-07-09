@@ -1,4 +1,5 @@
 import ContactForm from "@/components/contactForm";
+import LenisWrapper from "@/components/lenisWrapper/leniswrapper";
 import About from "@/sections/about";
 import Experience from "@/sections/experience";
 import Footer from "@/sections/footer";
@@ -11,8 +12,9 @@ import { PersonalSEOContent } from "@/utils/homePageSeoContent";
 
 export default function Home() {
   return (
-    <div className="bg-neutral-950">
+    <LenisWrapper >
       <SEO seo={PersonalSEOContent} />
+
       <Navbar />
       <HeroSection />
       <About />
@@ -21,6 +23,6 @@ export default function Home() {
       <ProjectShowcase />
       <ContactForm />
       <Footer />
-    </div>
+    </LenisWrapper>
   );
 }

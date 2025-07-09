@@ -15,7 +15,7 @@ export const PersonalSEOContent: SEODataTypes = {
     "JavaScript Developer",
     "Portfolio Utkarsh Singhal",
   ],
-  canonical: "https://www.linkedin.com/in/utkarsh-singhal-3171b7182/",
+  canonical: "https://utkarsh-work.vercel.app/",
   og: {
     title: "Utkarsh Singhal | Full Stack Developer | React, Next.js Expert",
     description:
