@@ -92,7 +92,7 @@ const UtkarshCursor: FC<{ isMoving: boolean; velocity: Position }> = ({ isMoving
       >
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
-          <span className="text-green-100">UTKARSH</span>
+          <span className="text-green-100">Utkarsh</span>
         </div>
 
         {/* Connecting line */}
