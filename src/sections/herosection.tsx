@@ -72,7 +72,7 @@ export function HeroSection() {
       <div className=" fixed top-0 right-0 p-4 z-20">
         <HamburgerMenu />
       </div> */}
-      <main className="flex max-w-7xl justify-center items-center lg:py-30 ">
+      <main className="flex max-w-7xl justify-center items-center py-20 lg:py-30 ">
         <div>
           <div
             className="py-20  w-full mx-auto p-4 relative z-10 flex flex-col md:flex-row md:items-center md:justify-between"
