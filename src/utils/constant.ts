@@ -95,54 +95,59 @@ export const techStack = {
 };
 
 export const projects = [
-  {
-    id: "google-translator-2",
-    title: "Google Translator 2.0",
-    description:
-      "AI-powered translation tool with Gemini AI, supporting text-to-speech, speech-to-text, and multi-language selection.",
-    fullDescription:
-      "Developed an advanced translation tool using Gemini AI, allowing users to convert any language into another. Features include text-to-speech, speech-to-text, and real-time AI-powered translation with enhanced accuracy.",
-    color: "red",
-    gradient:
-      "linear-gradient(188.62deg, #6B0D33 49.9%, #DB2777 81.7%, #F472B6 93.88%, #F9D793 113.5%)",
-    shadow: "0 0 30px #DB2777",
-    image: "/googleTranslator.png",
-    link: "https://translator-google.vercel.app/",
-    github: "https://github.com/your-github/google-translator-2.0",
-    features: [
-      "Powered by Gemini AI for accurate translations.",
-      "Supports text-to-speech and speech-to-text.",
-      "User-friendly UI with seamless multi-language selection.",
-    ],
-    alt: "Google Translator 2.0 image",
-    technologies: [
-      {
-        name: "Next.js",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75",
-      },
-      {
-        name: "React",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75",
-      },
-      {
-        name: "TypeScript",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75",
-      },
-      {
-        name: "Gemini AI",
-        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC7ElEQVRYhcWWPWsUURSGn3PvxMnXJBFM4QcksVAxXfAniAZ/gaWFFhZqEhTUJCRGUDRq1kILwSZiayFEEBT/gJZ+VBoQFNQiqLNZs3PvsZjd7KqJye5o9sKyd5a973l4z5lzLmRYc7d929xtvzWLhslyuKh0FZWuxgF42elUehsHoOxLlIHGAXgOJZ7BLBpBlsPfYX+kWRQyOHAh50/kUfLAbE5PbTjAN2U6rxADBbi+oQBHZtxkHsIYKLlg7+T0aj1aUuuBwRnX2wbvIqAdoR2IBCKEVth7dEhe16JXmwPnlVj1TZ7U+nINxAoxSgFePshp+H8Abn5n1xb3KYYwD6wCIR/h08MZ3fRvAW4Ue7pcWMhDdxosDVqBYBkij3Z8EBZnc7r7nwB0XU7G25zMLyphTFXgXyD0F4gYNQV4cy+nl9bSX7UIt0+4o0XLzcRqa2IhsYq30EZacO1QKsCqffl3SQu0A2gWlgJh5PBJubUiQN+o3wx0Ar3AAHAAOJgYcFYpB08sFK2C+S3YbxDtCFEVRJRC0GQgEJ42GX0cCC+aDPMCC+VWLKTpCIAQIPCACCqKIijpd4ISm/TPyx9VRKT0rBgEo2Ak3YsCHsQQWiVQqaR+1RT0jfohhSvOsqlYcqDsSNEogYFoBdujKidKPUI7kbPHh2TFRrVmI+oZ81PO6nhi+CMdoVQAUtur9kAHcu36sDnzN/11dcKeMd+XWH2dWMIyQAqktKwMoRH03x+2a3bFdbfiYyhzk/6zM2xZhig5Uv1mRPC1RaT72bBdWo9uTbNgHOXupC8sO2Eqr2dpNmgL0vJqxP5Yr2ZNs+AigvXsCRxYJ1gP1gvi0yb0De2vJXjNAADvp+y8US4EHgIvBB4CJ3jP9JeRppomIdQxjstrx4QrJIawVAdu4VxQ1/Wu7huR9XImTQEETk7Xq5Np9Yx53TbpMl1LM92KjfIkcNLcMADgkfW0NhLgOWnXbRjAW6CjkQALgM8i8BOvpjwT7G/2qQAAAABJRU5ErkJggg==",
-      },
-      {
-        name: "Speech Recognition API",
-        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAY1BMVEUVFBoAAAAAAAsAAAXGxsfc3Nxramzi4uOEhIUJBxA2NTn////l5eWxsLKbm5yXl5ljY2U8PD/Q0NFbWl3y8vK4uLkaGR9GRUihoaIAAAhxcXO+vr99fX8nJyv7+/uQkJHW1td4h7FUAAAAsElEQVR4Ac3RBQKDMBAEQBZNurg7/P+VzdV7LwDiE4933Q8AJPcBBNrCKIzgLE7CyPyrvTGNCOnEjDn+EAXzJ5IlNUasEod+ybrR6LGFIDKaUiEMuye27GONNWNBOzCBRpAQxMhR4zQzfGLKSiMWroHgxha+xp2TJ3gw0+g3PCGIk42vEBmPJ3KHp7HlZgVjLhrd4VJXQ8qF86RwWqNDcKnDE65v8/dkE/D73BZiV/zuQNAJugNKvQoAAAAASUVORK5CYII=",
-      },
-    ],
-  },
-  {
+{
+  id: "getprojects-ai",
+  title: "GetProjects.ai - Dynamic Project Platform",
+  // Short description ab aur bhi punchy hai
+  description: "Built a Next.js app with 2,000+ dynamic SEO pages in 7 days, achieving a 92+ Lighthouse score.",
+  
+  // fullDescription ab seedha skills aur results pe focus karta hai
+  fullDescription: "Delivered this full-stack application from concept to deployment in a 7-day sprint. The core architecture generates over 2,000 dynamic, SEO-optimized pages using nested routing. Focused heavily on performance optimization to achieve 92+ Lighthouse scores on mobile and desktop, while also integrating a custom chatbot via API.",
+  
+  color: "purple",
+  gradient: "linear-gradient(188.62deg, #2E1065 49.9%, #4C1D95 81.7%, #7C3AED 93.88%, #A78BFA 113.5%)",
+  shadow: "0 0 30px #7C3AED",
+  image: "/getProjects.png",
+  link: "https://getproject.ai",
+  github: "",
+  
+  // Yeh features list bilkul perfect hai, short aur to-the-point
+  features: [
+    "Generates 2000+ unique, SEO-friendly dynamic pages.",
+    "Complex nested dynamic routing for intuitive navigation.",
+    "Optimized for performance with 92+ Lighthouse scores.",
+    "Rapid 7-day development cycle from scratch to launch.",
+    "Integrated chatbot for real-time user interaction."
+  ],
+  alt: "GetProjects.ai platform screenshot",
+  technologies: [
+    {
+      name: "Next.js",
+      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75"
+    },
+    {
+      name: "React",
+      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75"
+    },
+    {
+      name: "Tailwind CSS",
+      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75"
+    },
+    {
+      name: "TypeScript",
+      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75"
+    },
+    {
+      name: "Node.js",
+      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75"
+    },
+    {
+      name: "Vercel",
+      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fvercel.svg&w=48&q=75"
+    }
+  ]
+},
+{
     id: "neuralhq",
     title: "Corporate  Website",
     description:
@@ -181,6 +186,54 @@ export const projects = [
       },
     ],
   },
+  // {
+  //   id: "google-translator-2",
+  //   title: "Google Translator 2.0",
+  //   description:
+  //     "AI-powered translation tool with Gemini AI, supporting text-to-speech, speech-to-text, and multi-language selection.",
+  //   fullDescription:
+  //     "Developed an advanced translation tool using Gemini AI, allowing users to convert any language into another. Features include text-to-speech, speech-to-text, and real-time AI-powered translation with enhanced accuracy.",
+  //   color: "red",
+  //   gradient:
+  //     "linear-gradient(188.62deg, #6B0D33 49.9%, #DB2777 81.7%, #F472B6 93.88%, #F9D793 113.5%)",
+  //   shadow: "0 0 30px #DB2777",
+  //   image: "/googleTranslator.png",
+  //   link: "https://translator-google.vercel.app/",
+  //   github: "https://github.com/your-github/google-translator-2.0",
+  //   features: [
+  //     "Powered by Gemini AI for accurate translations.",
+  //     "Supports text-to-speech and speech-to-text.",
+  //     "User-friendly UI with seamless multi-language selection.",
+  //   ],
+  //   alt: "Google Translator 2.0 image",
+  //   technologies: [
+  //     {
+  //       name: "Next.js",
+  //       icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75",
+  //     },
+  //     {
+  //       name: "React",
+  //       icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75",
+  //     },
+  //     {
+  //       name: "Tailwind CSS",
+  //       icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75",
+  //     },
+  //     {
+  //       name: "TypeScript",
+  //       icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75",
+  //     },
+  //     {
+  //       name: "Gemini AI",
+  //       icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC7ElEQVRYhcWWPWsUURSGn3PvxMnXJBFM4QcksVAxXfAniAZ/gaWFFhZqEhTUJCRGUDRq1kILwSZiayFEEBT/gJZ+VBoQFNQiqLNZs3PvsZjd7KqJye5o9sKyd5a973l4z5lzLmRYc7d929xtvzWLhslyuKh0FZWuxgF42elUehsHoOxLlIHGAXgOJZ7BLBpBlsPfYX+kWRQyOHAh50/kUfLAbE5PbTjAN2U6rxADBbi+oQBHZtxkHsIYKLlg7+T0aj1aUuuBwRnX2wbvIqAdoR2IBCKEVth7dEhe16JXmwPnlVj1TZ7U+nINxAoxSgFePshp+H8Abn5n1xb3KYYwD6wCIR/h08MZ3fRvAW4Ue7pcWMhDdxosDVqBYBkij3Z8EBZnc7r7nwB0XU7G25zMLyphTFXgXyD0F4gYNQV4cy+nl9bSX7UIt0+4o0XLzcRqa2IhsYq30EZacO1QKsCqffl3SQu0A2gWlgJh5PBJubUiQN+o3wx0Ar3AAHAAOJgYcFYpB08sFK2C+S3YbxDtCFEVRJRC0GQgEJ42GX0cCC+aDPMCC+VWLKTpCIAQIPCACCqKIijpd4ISm/TPyx9VRKT0rBgEo2Ak3YsCHsQQWiVQqaR+1RT0jfohhSvOsqlYcqDsSNEogYFoBdujKidKPUI7kbPHh2TFRrVmI+oZ81PO6nhi+CMdoVQAUtur9kAHcu36sDnzN/11dcKeMd+XWH2dWMIyQAqktKwMoRH03x+2a3bFdbfiYyhzk/6zM2xZhig5Uv1mRPC1RaT72bBdWo9uTbNgHOXupC8sO2Eqr2dpNmgL0vJqxP5Yr2ZNs+AigvXsCRxYJ1gP1gvi0yb0De2vJXjNAADvp+y8US4EHgIvBB4CJ3jP9JeRppomIdQxjstrx4QrJIawVAdu4VxQ1/Wu7huR9XImTQEETk7Xq5Np9Yx53TbpMl1LM92KjfIkcNLcMADgkfW0NhLgOWnXbRjAW6CjkQALgM8i8BOvpjwT7G/2qQAAAABJRU5ErkJggg==",
+  //     },
+  //     {
+  //       name: "Speech Recognition API",
+  //       icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAY1BMVEUVFBoAAAAAAAsAAAXGxsfc3Nxramzi4uOEhIUJBxA2NTn////l5eWxsLKbm5yXl5ljY2U8PD/Q0NFbWl3y8vK4uLkaGR9GRUihoaIAAAhxcXO+vr99fX8nJyv7+/uQkJHW1td4h7FUAAAAsElEQVR4Ac3RBQKDMBAEQBZNurg7/P+VzdV7LwDiE4933Q8AJPcBBNrCKIzgLE7CyPyrvTGNCOnEjDn+EAXzJ5IlNUasEod+ybrR6LGFIDKaUiEMuye27GONNWNBOzCBRpAQxMhR4zQzfGLKSiMWroHgxha+xp2TJ3gw0+g3PCGIk42vEBmPJ3KHp7HlZgVjLhrd4VJXQ8qF86RwWqNDcKnDE65v8/dkE/D73BZiV/zuQNAJugNKvQoAAAAASUVORK5CYII=",
+  //     },
+  //   ],
+  // },
+  
   {
     id: "booking-clone",
     title: "Booking.com Clone",
