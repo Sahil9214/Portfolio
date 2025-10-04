@@ -43,7 +43,7 @@ export const techStack = {
     },
     {
       name: "Framer Motion",
-      logo: "https://img.icons8.com/?size=200&id=XKFRdQOs24QU&format=png",
+      logo: "https://img.icons8.com/?size=200&id=mAq7Hp0eGndB&format=png",
     },
     {
       name: "SASS",
