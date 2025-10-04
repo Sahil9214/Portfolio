@@ -138,7 +138,7 @@ export default function ProjectShowcase() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative mx-auto pt-28 w-full max-w-7xl py-10 bg-neutral-950"
+      className="relative mx-auto pt-28 px-4 w-full max-w-7xl py-10 bg-neutral-950"
       aria-labelledby="work-heading"
     >
       <div className="header flex items-center gap-4 ">

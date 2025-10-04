@@ -109,7 +109,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <h2 className="text-5xl font-bold mb-2 relative text-white">
+            <h2 className="md:text-5xl text-3xl font-bold mb-2 relative text-white">
               <span className="relative">
                 <span className="absolute -inset-1 blur-sm bg-gradient-to-r from-purple-500 to-orange-500 opacity-70 text-transparent bg-clip-text">
                   Thanks for visiting
