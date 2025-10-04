@@ -24,7 +24,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <p className="text-neutral-400 text-lg md:text-lg font-anton font-normal mb-2">
-            Currently working on **high-impact, large-scale projects** that push
+            Currently working on high-impact, large-scale projects that push
             the boundaries of SEO, scalability, and modern frontend architecture.
           </p>
 
@@ -36,12 +36,12 @@ export function TimelineDemo() {
               lightning-fast crawl & indexing by Google.
             </li>
             <li className="mt-1">
-              Integrated advanced **structured data & sitemaps** to improve organic
-              visibility. Entire website is **crawlable and indexable** with dynamic
+              Integrated advanced structured data & sitemaps to improve organic
+              visibility. Entire website is crawlable and indexable with dynamic
               page generation and robust SEO strategies.
             </li>
             <li className="mt-1">
-              Contributed to **Engineerbabu.com** website improvements, focusing on
+              Contributed to <span className="text-white">Engineerbabu.com</span> website improvements, focusing on
               UX/UI performance, modular architecture, and clean componentization.
             </li>
             <li className="mt-1">
@@ -51,8 +51,8 @@ export function TimelineDemo() {
               <span className="text-white"> shadcn/ui</span> for a sleek admin interface.
             </li>
             <li className="mt-1">
-              Implemented **user authentication, data management, and secure file
-              handling** using Supabase. Scalable, role-based access system built
+              Implemented <span className="text-white">user authentication, data management, and secure file
+                handling</span> using Supabase. Scalable, role-based access system built
               with server components and modern React patterns.
             </li>
           </ul>
