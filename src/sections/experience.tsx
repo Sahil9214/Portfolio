@@ -64,7 +64,7 @@ export function TimelineDemo() {
               className="cursor-pointer"
             >
               <Image
-                src="/getprojects.png"
+                src="/getProjects.webp"
                 alt="GetProjects.ai Website"
                 width={500}
                 height={500}
