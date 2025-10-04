@@ -133,7 +133,7 @@ export const projects = [
     color: "purple",
     gradient: "linear-gradient(188.62deg, #2E1065 49.9%, #4C1D95 81.7%, #7C3AED 93.88%, #A78BFA 113.5%)",
     shadow: "0 0 30px #7C3AED",
-    image: "/getProjects.png",
+    image: "/getProjects.webp",
     link: "https://getproject.ai",
     github: "",
 
