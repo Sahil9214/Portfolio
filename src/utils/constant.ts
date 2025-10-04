@@ -31,7 +31,7 @@ export const techStack = {
     },
     {
       name: "Next.js",
-      logo: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png",
+      logo: "https://img.icons8.com/?size=200&id=gwR0hbBi5JeZ&format=png&color=FFFFFF",
     },
     {
       name: "Redux",
@@ -89,6 +89,39 @@ export const techStack = {
 
 export const projects = [
   {
+    id: "simba-analytics",
+    title: "Simba Analytics Dashboard & Seller App",
+    description: "Interactive analytics dashboard & seller app using Supabase, AWS Textract, and Next.js.",
+
+    fullDescription: "Built a scalable analytics platform for Simba Beer. Extracted company data from PDFs & Excel using AWS Textract, managed it with Supabase, and visualized insights via Recharts. Includes a seller mobile app to track targets in real-time.",
+
+    color: "orange",
+    gradient: "linear-gradient(188.62deg, #4B2500 49.9%, #A0522D 81.7%, #FF8C00 93.88%, #FFD580 113.5%)",
+    shadow: "0 0 30px #FF8C00",
+    image: "/simba.webp",
+    link: "https://app.simbabeer.com",
+    github: "",
+
+    features: [
+      "Data extraction from PDFs & Excel via AWS Textract",
+      "Managed securely in Supabase",
+      "Dashboard with Donut, Line & Competition charts (Recharts)",
+      "Seller mobile app for real-time target tracking"
+    ],
+    alt: "Simba Analytics Dashboard screenshot",
+    technologies: [
+      { name: "Next.js", icon: "https://img.icons8.com/?size=200&id=gwR0hbBi5JeZ&format=png&color=FFFFFF" },
+      { name: "React", icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png" },
+      { name: "Tailwind CSS", icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png" },
+      { name: "TypeScript", icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png" },
+      { name: "Supabase", icon: "https://img.icons8.com/?size=288&id=grZaE9tjqDyr&format=png" },
+      { name: "AWS", icon: "https://img.icons8.com/?size=288&id=33039&format=png" },
+      { name: "Recharts", icon: "https://img.icons8.com/?size=200&id=2dT788URbae8&format=png" }
+    ]
+  }
+  ,
+
+  {
     id: "getprojects-ai",
     title: "GetProjects.ai - Dynamic Project Platform",
     // Short description ab aur bhi punchy hai
@@ -116,23 +149,23 @@ export const projects = [
     technologies: [
       {
         name: "Next.js",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75"
+        icon: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png"
       },
       {
         name: "React",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75"
+        icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png"
       },
       {
         name: "Tailwind CSS",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75"
+        icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png"
       },
       {
         name: "TypeScript",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75"
+        icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png"
       },
       {
         name: "Node.js",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75"
+        icon: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png"
       },
       {
         name: "Vercel",
@@ -163,70 +196,22 @@ export const projects = [
     technologies: [
       {
         name: "Next.js",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png",
       },
       {
         name: "React",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png",
       },
       {
         name: "TypeScript",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png",
       },
     ],
   },
-  // {
-  //   id: "google-translator-2",
-  //   title: "Google Translator 2.0",
-  //   description:
-  //     "AI-powered translation tool with Gemini AI, supporting text-to-speech, speech-to-text, and multi-language selection.",
-  //   fullDescription:
-  //     "Developed an advanced translation tool using Gemini AI, allowing users to convert any language into another. Features include text-to-speech, speech-to-text, and real-time AI-powered translation with enhanced accuracy.",
-  //   color: "red",
-  //   gradient:
-  //     "linear-gradient(188.62deg, #6B0D33 49.9%, #DB2777 81.7%, #F472B6 93.88%, #F9D793 113.5%)",
-  //   shadow: "0 0 30px #DB2777",
-  //   image: "/googleTranslator.png",
-  //   link: "https://translator-google.vercel.app/",
-  //   github: "https://github.com/your-github/google-translator-2.0",
-  //   features: [
-  //     "Powered by Gemini AI for accurate translations.",
-  //     "Supports text-to-speech and speech-to-text.",
-  //     "User-friendly UI with seamless multi-language selection.",
-  //   ],
-  //   alt: "Google Translator 2.0 image",
-  //   technologies: [
-  //     {
-  //       name: "Next.js",
-  //       icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75",
-  //     },
-  //     {
-  //       name: "React",
-  //       icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75",
-  //     },
-  //     {
-  //       name: "Tailwind CSS",
-  //       icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75",
-  //     },
-  //     {
-  //       name: "TypeScript",
-  //       icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75",
-  //     },
-  //     {
-  //       name: "Gemini AI",
-  //       icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC7ElEQVRYhcWWPWsUURSGn3PvxMnXJBFM4QcksVAxXfAniAZ/gaWFFhZqEhTUJCRGUDRq1kILwSZiayFEEBT/gJZ+VBoQFNQiqLNZs3PvsZjd7KqJye5o9sKyd5a973l4z5lzLmRYc7d929xtvzWLhslyuKh0FZWuxgF42elUehsHoOxLlIHGAXgOJZ7BLBpBlsPfYX+kWRQyOHAh50/kUfLAbE5PbTjAN2U6rxADBbi+oQBHZtxkHsIYKLlg7+T0aj1aUuuBwRnX2wbvIqAdoR2IBCKEVth7dEhe16JXmwPnlVj1TZ7U+nINxAoxSgFePshp+H8Abn5n1xb3KYYwD6wCIR/h08MZ3fRvAW4Ue7pcWMhDdxosDVqBYBkij3Z8EBZnc7r7nwB0XU7G25zMLyphTFXgXyD0F4gYNQV4cy+nl9bSX7UIt0+4o0XLzcRqa2IhsYq30EZacO1QKsCqffl3SQu0A2gWlgJh5PBJubUiQN+o3wx0Ar3AAHAAOJgYcFYpB08sFK2C+S3YbxDtCFEVRJRC0GQgEJ42GX0cCC+aDPMCC+VWLKTpCIAQIPCACCqKIijpd4ISm/TPyx9VRKT0rBgEo2Ak3YsCHsQQWiVQqaR+1RT0jfohhSvOsqlYcqDsSNEogYFoBdujKidKPUI7kbPHh2TFRrVmI+oZ81PO6nhi+CMdoVQAUtur9kAHcu36sDnzN/11dcKeMd+XWH2dWMIyQAqktKwMoRH03x+2a3bFdbfiYyhzk/6zM2xZhig5Uv1mRPC1RaT72bBdWo9uTbNgHOXupC8sO2Eqr2dpNmgL0vJqxP5Yr2ZNs+AigvXsCRxYJ1gP1gvi0yb0De2vJXjNAADvp+y8US4EHgIvBB4CJ3jP9JeRppomIdQxjstrx4QrJIawVAdu4VxQ1/Wu7huR9XImTQEETk7Xq5Np9Yx53TbpMl1LM92KjfIkcNLcMADgkfW0NhLgOWnXbRjAW6CjkQALgM8i8BOvpjwT7G/2qQAAAABJRU5ErkJggg==",
-  //     },
-  //     {
-  //       name: "Speech Recognition API",
-  //       icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAY1BMVEUVFBoAAAAAAAsAAAXGxsfc3Nxramzi4uOEhIUJBxA2NTn////l5eWxsLKbm5yXl5ljY2U8PD/Q0NFbWl3y8vK4uLkaGR9GRUihoaIAAAhxcXO+vr99fX8nJyv7+/uQkJHW1td4h7FUAAAAsElEQVR4Ac3RBQKDMBAEQBZNurg7/P+VzdV7LwDiE4933Q8AJPcBBNrCKIzgLE7CyPyrvTGNCOnEjDn+EAXzJ5IlNUasEod+ybrR6LGFIDKaUiEMuye27GONNWNBOzCBRpAQxMhR4zQzfGLKSiMWroHgxha+xp2TJ3gw0+g3PCGIk42vEBmPJ3KHp7HlZgVjLhrd4VJXQ8qF86RwWqNDcKnDE65v8/dkE/D73BZiV/zuQNAJugNKvQoAAAAASUVORK5CYII=",
-  //     },
-  //   ],
-  // },
-
   {
     id: "booking-clone",
     title: "Booking.com Clone",
@@ -250,27 +235,27 @@ export const projects = [
     technologies: [
       {
         name: "Next.js",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png",
       },
       {
         name: "React",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png",
       },
       {
         name: "TypeScript",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png",
       },
       {
         name: "Node.js",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png",
       },
       {
         name: "MongoDB",
-        icon: "https://www.me.toinfinite.dev/logo/mongodb.svg",
+        icon: "https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png",
       },
     ],
   },
@@ -299,35 +284,35 @@ export const projects = [
     technologies: [
       {
         name: "Next.js",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png",
       },
       {
         name: "React",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png",
       },
       {
         name: "TypeScript",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png",
       },
       {
         name: "Node.js",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75",
+        icon: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png",
       },
       {
         name: "Express",
-        icon: "https://www.me.toinfinite.dev/logo/express.svg",
+        icon: "https://img.icons8.com/?size=200&id=2ZOaTclOqD4q&format=png",
       },
       {
         name: "MongoDB",
-        icon: "https://www.me.toinfinite.dev/logo/mongodb.svg",
+        icon: "https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png",
       },
       {
         name: "JWT",
-        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAM1BMVEVHcEwZGRkZGRkZGRkYGBgZGRkDAwMuLi6NjY3Q0NDy8vL///97e3tnZ2fi4uJKSkqqqqqgNU5tAAAABnRSTlMAJq/y/2Eq/t9kAAAAx0lEQVR4AX3T4RKFEBQEYOFuOND7P+3N7HA0VftLfbMDyRizWedvcXYzZ37+Jb+z51+zGTuGmBlvrHEU7CEmyVlSDDvoztBKlZ5SpKdmKrEJs+/CNEWwIAlIHBXcMADhDSvOYX3GxA2kJ4wgIl7Rt3o0Wtd21OYV9Vz0SZsSw2AgRLk0+3oKdHFYMXKJw+JE3WgfcpsTtXoAxywSmfVs+UYRTb9Kw4I6bSmcUHHp5szeQKfqawjVqzlesMkgMfbzan5e6s/f4Q+W3BLBzhB6zgAAAABJRU5ErkJggg==", // replace with your JWT icon or placeholder
+        icon: "https://img.icons8.com/?size=288&id=rHpveptSuwDz&format=png",
       },
       {
         name: "Bcrypt",
@@ -339,7 +324,7 @@ export const projects = [
       },
       {
         name: "Vercel",
-        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAIAAAD9b0jDAAAAeklEQVR4Ae3KsQnAIBQE0FtJcBh3cRJbITvYOIRLuILl5WMVCAmqQgj4qv/vDtv2jaPCWqywUAiBlRxYQmvNC6UU5qWUeCEvJhljeCMhZuSceSMhhllr+UAqjCml8IFUGOCc4ysZoBcboEuMkQ1khnbee9dAZti2vzoBA1oc6SnKeswAAAAASUVORK5CYII=",
+        icon: "https://img.icons8.com/?size=200&id=2xFS7aynbwiR&format=png",
       },
       {
         name: "Render",
