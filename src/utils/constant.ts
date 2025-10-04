@@ -19,31 +19,27 @@ export const techStack = {
   frontend: [
     {
       name: "Javascript",
-      logo: "data:image/png;base64,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",
+      logo: "https://img.icons8.com/?size=288&id=108784&format=png",
     },
     {
       name: "Typescript",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png",
     },
     {
       name: "React",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png",
     },
     {
       name: "Next.js",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png",
     },
     {
       name: "Redux",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fredux.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=288&id=jD-fJzVguBmw&format=png",
     },
     {
       name: "Tailwind CSS",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75",
-    },
-    {
-      name: "GSAP",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fgsap.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png",
     },
     {
       name: "Framer Motion",
@@ -51,11 +47,11 @@ export const techStack = {
     },
     {
       name: "SASS",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fsass.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=288&id=QBqFNfPPB2Kx&format=png",
     },
     {
       name: "Bootstrap",
-      logo: "https://www.me.toinfinite.dev/logo/bootstrap.svg",
+      logo: "https://img.icons8.com/?size=288&id=84710&format=png",
     },
   ],
   backend: [
@@ -63,91 +59,88 @@ export const techStack = {
       name: "Node.js",
       logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75",
     },
-    { name: "Nest.js", logo: "https://www.me.toinfinite.dev/logo/nest.svg" },
+    { name: "Nest.js", logo: "https://img.icons8.com/?size=288&id=9ESZMOeUioJS&format=png" },
     {
       name: "Express.js",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fexpress.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=200&id=2ZOaTclOqD4q&format=png",
     },
   ],
   database: [
-    { name: "MySQL", logo: "https://www.me.toinfinite.dev/logo/mysql.svg" },
+    { name: "MySQL", logo: "https://img.icons8.com/?size=200&id=QeIg9siFKGgp&format=png" },
     {
       name: "PostgreSQL",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2FpostgreSQL.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=288&id=38561&format=png",
     },
-    { name: "MongoDB", logo: "https://www.me.toinfinite.dev/logo/mongodb.svg" },
-    {
-      name: "Prisma",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fprisma.png&w=48&q=75",
-    },
+    { name: "MongoDB", logo: "https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png" },
+    { name: "Supabase", logo: "https://img.icons8.com/?size=288&id=grZaE9tjqDyr&format=png" }
   ],
   tools: [
     {
       name: "Git",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fgit.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=288&id=20906&format=png",
     },
-    { name: "Docker", logo: "https://www.me.toinfinite.dev/logo/docker.svg" },
+    { name: "Docker", logo: "https://img.icons8.com/?size=200&id=cdYUlRaag9G9&format=png" },
     {
       name: "AWS",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Faws.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=288&id=33039&format=png",
     },
   ],
 };
 
 export const projects = [
-{
-  id: "getprojects-ai",
-  title: "GetProjects.ai - Dynamic Project Platform",
-  // Short description ab aur bhi punchy hai
-  description: "Built a Next.js app with 2,000+ dynamic SEO pages in 7 days, achieving a 92+ Lighthouse score.",
-  
-  // fullDescription ab seedha skills aur results pe focus karta hai
-  fullDescription: "Delivered this full-stack application from concept to deployment in a 7-day sprint. The core architecture generates over 2,000 dynamic, SEO-optimized pages using nested routing. Focused heavily on performance optimization to achieve 92+ Lighthouse scores on mobile and desktop, while also integrating a custom chatbot via API.",
-  
-  color: "purple",
-  gradient: "linear-gradient(188.62deg, #2E1065 49.9%, #4C1D95 81.7%, #7C3AED 93.88%, #A78BFA 113.5%)",
-  shadow: "0 0 30px #7C3AED",
-  image: "/getProjects.png",
-  link: "https://getproject.ai",
-  github: "",
-  
-  // Yeh features list bilkul perfect hai, short aur to-the-point
-  features: [
-    "Generates 2000+ unique, SEO-friendly dynamic pages.",
-    "Complex nested dynamic routing for intuitive navigation.",
-    "Optimized for performance with 92+ Lighthouse scores.",
-    "Rapid 7-day development cycle from scratch to launch.",
-    "Integrated chatbot for real-time user interaction."
-  ],
-  alt: "GetProjects.ai platform screenshot",
-  technologies: [
-    {
-      name: "Next.js",
-      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75"
-    },
-    {
-      name: "React",
-      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75"
-    },
-    {
-      name: "Tailwind CSS",
-      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75"
-    },
-    {
-      name: "TypeScript",
-      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75"
-    },
-    {
-      name: "Node.js",
-      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75"
-    },
-    {
-      name: "Vercel",
-      icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fvercel.svg&w=48&q=75"
-    }
-  ]
-},
-{
+  {
+    id: "getprojects-ai",
+    title: "GetProjects.ai - Dynamic Project Platform",
+    // Short description ab aur bhi punchy hai
+    description: "Built a Next.js app with 2,000+ dynamic SEO pages in 7 days, achieving a 92+ Lighthouse score.",
+
+    // fullDescription ab seedha skills aur results pe focus karta hai
+    fullDescription: "Delivered this full-stack application from concept to deployment in a 7-day sprint. The core architecture generates over 2,000 dynamic, SEO-optimized pages using nested routing. Focused heavily on performance optimization to achieve 92+ Lighthouse scores on mobile and desktop, while also integrating a custom chatbot via API.",
+
+    color: "purple",
+    gradient: "linear-gradient(188.62deg, #2E1065 49.9%, #4C1D95 81.7%, #7C3AED 93.88%, #A78BFA 113.5%)",
+    shadow: "0 0 30px #7C3AED",
+    image: "/getProjects.png",
+    link: "https://getproject.ai",
+    github: "",
+
+    // Yeh features list bilkul perfect hai, short aur to-the-point
+    features: [
+      "Generates 2000+ unique, SEO-friendly dynamic pages.",
+      "Complex nested dynamic routing for intuitive navigation.",
+      "Optimized for performance with 92+ Lighthouse scores.",
+      "Rapid 7-day development cycle from scratch to launch.",
+      "Integrated chatbot for real-time user interaction."
+    ],
+    alt: "GetProjects.ai platform screenshot",
+    technologies: [
+      {
+        name: "Next.js",
+        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnext.png&w=48&q=75"
+      },
+      {
+        name: "React",
+        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Freact.png&w=48&q=75"
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Ftailwind.png&w=48&q=75"
+      },
+      {
+        name: "TypeScript",
+        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fts.png&w=48&q=75"
+      },
+      {
+        name: "Node.js",
+        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75"
+      },
+      {
+        name: "Vercel",
+        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fvercel.svg&w=48&q=75"
+      }
+    ]
+  },
+  {
     id: "neuralhq",
     title: "Corporate  Website",
     description:
@@ -233,7 +226,7 @@ export const projects = [
   //     },
   //   ],
   // },
-  
+
   {
     id: "booking-clone",
     title: "Booking.com Clone",

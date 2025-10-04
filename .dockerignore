@@ -1,0 +1,14 @@
+# Dependencies
+node_modules
+
+# Next.js build folder
+.next
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Other
+npm-debug.log
+README.md
+.git    
