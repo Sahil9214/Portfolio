@@ -259,79 +259,79 @@ export const projects = [
       },
     ],
   },
-  {
-    id: "linkforge",
-    title: "LinkCut – Secure URL Shortener",
-    description:
-      "A full-stack URL shortener with authentication and analytics, built for performance and security.",
-    fullDescription:
-      "Developed a robust URL shortening service where users can register, shorten long links, and track analytics. The application is secured using JWT and bcrypt, with a responsive frontend using Next.js and ShadCN UI. Frontend is deployed on Vercel and backend on Render, ensuring scalability and optimal performance.",
-    color: "indigo",
-    gradient:
-      "linear-gradient(188.62deg, #312E81 49.9%, #6366F1 81.7%, #A5B4FC 93.88%, #F9D793 113.5%)",
-    shadow: "0 0 30px #6366F1",
-    image: "/urlshortner.png", // replace with your actual image path
-    link: "https://url-shortner-web.vercel.app/", // replace with actual deployed link
-    github: "https://github.com/Sahil9214/url-shortner",
-    features: [
-      "User authentication with JWT and bcrypt.",
-      "Shorten long URLs with custom aliases.",
-      "Track number of visits and link creation date.",
-      "Secure backend with Express and MongoDB.",
-      "Responsive UI with Next.js, Tailwind, and ShadCN.",
-    ],
-    alt: "LinkCut – Secure URL Shortener website image ",
-    technologies: [
-      {
-        name: "Next.js",
-        icon: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png",
-      },
-      {
-        name: "React",
-        icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png",
-      },
-      {
-        name: "TypeScript",
-        icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png",
-      },
-      {
-        name: "Node.js",
-        icon: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png",
-      },
-      {
-        name: "Express",
-        icon: "https://img.icons8.com/?size=200&id=2ZOaTclOqD4q&format=png",
-      },
-      {
-        name: "MongoDB",
-        icon: "https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png",
-      },
-      {
-        name: "JWT",
-        icon: "https://img.icons8.com/?size=288&id=rHpveptSuwDz&format=png",
-      },
-      {
-        name: "Bcrypt",
-        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACgElEQVR4Ad2XA7PkUBCFp/aPrG3btm3btm0U1rZt27btiY2z6dV48ZLHryrupM9Fnb7x+cYgVdolzIg0S76+T7PEj4TYKBflpNw+OqGbibF9F+G+5e56wkcnibklPwFpna3OTg4TL0pYc0/FtscqNjxQseC6jN7HRRRax3otIJC43wkRz1gTf8Kygf3PNRTfwHonIOcqBide6/gfvsgWym9m3QvItMyPqx8NEF8VC4tuKWi6l0fe1QyoVzIv96PqNg5037QRwtUPhnsBHQ4JeMKYGH9BQtYVP+5V2sph+mU5InbSRRnhlNnEejsJS21kwak2RN2OeJZvDYNw2h4QvBVw9KUOwq9ECsjoDFc4zfbx3gmovp3DLx74zYjnFbewCEYxbORcyXgnYN19Fb/Y81QD3cu1ikG1bRwqbGFDnhMzr8je+UAGp3sZNTDNpzqTcNApEYaFCEwbjjEpSOulETXZwyOYlvt5zL4qIxofJIvivXXC+dcDyWwbyL3qhw80chINPi2iz3ERF94bgV6wQPe8E3Ax8HHyhagx5TazsBFAM21yQ/cC0i/1QzYCn97ySIsVG1ErVt9T3Qsou5lFEDT2MWNPv9ERzI1PhnsBNOGCGXNOihUbUbSoR1wL6HVMRBBUlqPGpXOG6p1oIZg7X1z0wKEXOnVhyAQk2h+M7u9jz0sIg6pk3AVMuSQjGlQJS2xgqcU0QVFtO0erItg2QqB6UWitSysefEqEP+CAEY5n2YgK67zTYDfvjQ/kWMlg1DmJFibhCSPQnQBaJxZbz8bPorSA06VdjwiYd012/EDFbqcobXaO5P3djwrIs5pJ0cty77dE/zVL9J/TRP89/wYoHplyX4z7pQAAAABJRU5ErkJggg==", // replace with your bcrypt icon or placeholder
-      },
-      {
-        name: "ShadCN UI",
-        icon: "https://www.shadcnblocks.com/images/block/block-1.svg", // add or replace with valid icon
-      },
-      {
-        name: "Vercel",
-        icon: "https://img.icons8.com/?size=200&id=2xFS7aynbwiR&format=png",
-      },
-      {
-        name: "Render",
-        icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4AWJwL/ABtF8HJxCDQBSGT6kh121kWrAFe7ADK0kZtmATW4QVzL6DgSUQSZ4jgeDAd/aPyEAe9a4AjEAC/ZNAhgfsBzfkYQGYDHrB1zQAs4AHvSGa3gCmgN5heQMrKEGsAhwZ4K0CNjLAWQUo6UMEmH196X6EGAHtuv6Kfnik7XQRYWTUtVehuYr3VQkRHEgVIF1Zs5APEgRY6jntAFKBlX7MBgH04RYBmT/cJiDNgBkwA2bAqwIiwc+f014/Ki3k6gX4gg8AAAAASUVORK5CYII=",
-      },
-    ],
-  },
+  // {
+  //   id: "linkforge",
+  //   title: "LinkCut – Secure URL Shortener",
+  //   description:
+  //     "A full-stack URL shortener with authentication and analytics, built for performance and security.",
+  //   fullDescription:
+  //     "Developed a robust URL shortening service where users can register, shorten long links, and track analytics. The application is secured using JWT and bcrypt, with a responsive frontend using Next.js and ShadCN UI. Frontend is deployed on Vercel and backend on Render, ensuring scalability and optimal performance.",
+  //   color: "indigo",
+  //   gradient:
+  //     "linear-gradient(188.62deg, #312E81 49.9%, #6366F1 81.7%, #A5B4FC 93.88%, #F9D793 113.5%)",
+  //   shadow: "0 0 30px #6366F1",
+  //   image: "/urlshortner.png", // replace with your actual image path
+  //   link: "https://url-shortner-web.vercel.app/", // replace with actual deployed link
+  //   github: "https://github.com/Sahil9214/url-shortner",
+  //   features: [
+  //     "User authentication with JWT and bcrypt.",
+  //     "Shorten long URLs with custom aliases.",
+  //     "Track number of visits and link creation date.",
+  //     "Secure backend with Express and MongoDB.",
+  //     "Responsive UI with Next.js, Tailwind, and ShadCN.",
+  //   ],
+  //   alt: "LinkCut – Secure URL Shortener website image ",
+  //   technologies: [
+  //     {
+  //       name: "Next.js",
+  //       icon: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png",
+  //     },
+  //     {
+  //       name: "React",
+  //       icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png",
+  //     },
+  //     {
+  //       name: "Tailwind CSS",
+  //       icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png",
+  //     },
+  //     {
+  //       name: "TypeScript",
+  //       icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png",
+  //     },
+  //     {
+  //       name: "Node.js",
+  //       icon: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png",
+  //     },
+  //     {
+  //       name: "Express",
+  //       icon: "https://img.icons8.com/?size=200&id=2ZOaTclOqD4q&format=png",
+  //     },
+  //     {
+  //       name: "MongoDB",
+  //       icon: "https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png",
+  //     },
+  //     {
+  //       name: "JWT",
+  //       icon: "https://img.icons8.com/?size=288&id=rHpveptSuwDz&format=png",
+  //     },
+  //     {
+  //       name: "Bcrypt",
+  //       icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACgElEQVR4Ad2XA7PkUBCFp/aPrG3btm3btm0U1rZt27btiY2z6dV48ZLHryrupM9Fnb7x+cYgVdolzIg0S76+T7PEj4TYKBflpNw+OqGbibF9F+G+5e56wkcnibklPwFpna3OTg4TL0pYc0/FtscqNjxQseC6jN7HRRRax3otIJC43wkRz1gTf8Kygf3PNRTfwHonIOcqBide6/gfvsgWym9m3QvItMyPqx8NEF8VC4tuKWi6l0fe1QyoVzIv96PqNg5037QRwtUPhnsBHQ4JeMKYGH9BQtYVP+5V2sph+mU5InbSRRnhlNnEejsJS21kwak2RN2OeJZvDYNw2h4QvBVw9KUOwq9ECsjoDFc4zfbx3gmovp3DLx74zYjnFbewCEYxbORcyXgnYN19Fb/Y81QD3cu1ikG1bRwqbGFDnhMzr8je+UAGp3sZNTDNpzqTcNApEYaFCEwbjjEpSOulETXZwyOYlvt5zL4qIxofJIvivXXC+dcDyWwbyL3qhw80chINPi2iz3ERF94bgV6wQPe8E3Ax8HHyhagx5TazsBFAM21yQ/cC0i/1QzYCn97ySIsVG1ErVt9T3Qsou5lFEDT2MWNPv9ERzI1PhnsBNOGCGXNOihUbUbSoR1wL6HVMRBBUlqPGpXOG6p1oIZg7X1z0wKEXOnVhyAQk2h+M7u9jz0sIg6pk3AVMuSQjGlQJS2xgqcU0QVFtO0erItg2QqB6UWitSysefEqEP+CAEY5n2YgK67zTYDfvjQ/kWMlg1DmJFibhCSPQnQBaJxZbz8bPorSA06VdjwiYd012/EDFbqcobXaO5P3djwrIs5pJ0cty77dE/zVL9J/TRP89/wYoHplyX4z7pQAAAABJRU5ErkJggg==", // replace with your bcrypt icon or placeholder
+  //     },
+  //     {
+  //       name: "ShadCN UI",
+  //       icon: "https://www.shadcnblocks.com/images/block/block-1.svg", // add or replace with valid icon
+  //     },
+  //     {
+  //       name: "Vercel",
+  //       icon: "https://img.icons8.com/?size=200&id=2xFS7aynbwiR&format=png",
+  //     },
+  //     {
+  //       name: "Render",
+  //       icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAwklEQVR4AWJwL/ABtF8HJxCDQBSGT6kh121kWrAFe7ADK0kZtmATW4QVzL6DgSUQSZ4jgeDAd/aPyEAe9a4AjEAC/ZNAhgfsBzfkYQGYDHrB1zQAs4AHvSGa3gCmgN5heQMrKEGsAhwZ4K0CNjLAWQUo6UMEmH196X6EGAHtuv6Kfnik7XQRYWTUtVehuYr3VQkRHEgVIF1Zs5APEgRY6jntAFKBlX7MBgH04RYBmT/cJiDNgBkwA2bAqwIiwc+f014/Ki3k6gX4gg8AAAAASUVORK5CYII=",
+  //     },
+  //   ],
+  // },
 ];
 
 // PROJECT DATA
