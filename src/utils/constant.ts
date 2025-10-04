@@ -43,7 +43,7 @@ export const techStack = {
     },
     {
       name: "Framer Motion",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fframer-motion.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=200&id=XKFRdQOs24QU&format=png",
     },
     {
       name: "SASS",
@@ -57,7 +57,7 @@ export const techStack = {
   backend: [
     {
       name: "Node.js",
-      logo: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fnode.png&w=48&q=75",
+      logo: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png",
     },
     { name: "Nest.js", logo: "https://img.icons8.com/?size=288&id=9ESZMOeUioJS&format=png" },
     {
