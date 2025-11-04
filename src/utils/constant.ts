@@ -99,7 +99,7 @@ export const projects = [
     gradient: "linear-gradient(188.62deg, #4B2500 49.9%, #A0522D 81.7%, #FF8C00 93.88%, #FFD580 113.5%)",
     shadow: "0 0 30px #FF8C00",
     image: "/simba.webp",
-    link: "https://app.simbabeer.com",
+    link: "https://simbabeer.com/",
     github: "",
 
     features: [
