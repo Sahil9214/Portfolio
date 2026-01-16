@@ -314,7 +314,7 @@ export default function ProjectShowcase() {
                         className="text-accent-foreground/85 mt-4 flex flex-col gap-y-2 text-base"
                         aria-label="Project features"
                       >
-                        {t(`projects.list.${project.id}.features`, { returnObjects: true })?.map((feature: string, index: number) => (
+                        {(t(`projects.list.${project.id}.features`, { returnObjects: true }) as string[])?.map((feature: string, index: number) => (
                           <li key={index} className="flex items-center text-sm">
                             <svg
                               width="24"
