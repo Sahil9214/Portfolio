@@ -7,7 +7,7 @@ interface TimelineEntry {
   title: string;
   content: React.ReactNode;
 }
-
+// hello
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,8 +45,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           {data.map((item, index) => (
             <div
               key={index}
-              className={`flex justify-start pt-10  md:pt-20 md:gap-10 ${index === 0 ? "pt-20" : "pt-10"
-                }`}
+              className={`flex justify-start pt-10  md:pt-20 md:gap-10 ${
+                index === 0 ? "pt-20" : "pt-10"
+              }`}
             >
               <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
                 <div className="h-10 absolute left-2 md:left-2 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
