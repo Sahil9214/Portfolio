@@ -80,7 +80,7 @@ export default function RootLayout({
         {/* ✅ Google Site Verification */}
         <meta
           name="google-site-verification"
-          content="PNuI7BQmbGJ9mkygjTPjkjhU9yMfUOqWFaZfNsfIShw"
+          content="ZH7E-C7bShyXOB3374D-FkBeF69YAP65FKZPBVS-eg8"
         />
         <meta name="author" content="Utkarsh Singhal" />
         <meta name="theme-color" content="#0f172a" />

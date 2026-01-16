@@ -35,7 +35,10 @@ export default function ProjectShowcase() {
       });
     };
 
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
 
     // Observe all project refs
     projectRefs.current.forEach((ref) => {
@@ -57,7 +60,10 @@ export default function ProjectShowcase() {
           const elementBottom = elementTop + rect.height;
 
           // Check if element is in viewport
-          if (scrollY + windowHeight * 0.3 >= elementTop && scrollY + windowHeight * 0.7 <= elementBottom) {
+          if (
+            scrollY + windowHeight * 0.3 >= elementTop &&
+            scrollY + windowHeight * 0.7 <= elementBottom
+          ) {
             const projectId = projects[index]?.id;
             if (projectId && activeProject !== projectId) {
               console.log("Manual scroll setting active project:", projectId);
@@ -80,11 +86,11 @@ export default function ProjectShowcase() {
       }
     };
 
-    window.addEventListener('scroll', throttledScroll);
+    window.addEventListener("scroll", throttledScroll);
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('scroll', throttledScroll);
+      window.removeEventListener("scroll", throttledScroll);
     };
   }, [activeProject]);
 
@@ -176,7 +182,9 @@ export default function ProjectShowcase() {
                     className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl md:pointer-events-auto lg:h-[560px] lg:rounded-3xl lg:p-2"
                     href={project.link}
                     rel="noreferrer"
-                    aria-label={`View ${t(`projects.list.${project.id}.title`)} project`}
+                    aria-label={`View ${t(
+                      `projects.list.${project.id}.title`
+                    )} project`}
                   >
                     <div
                       className="absolute inset-x-0 top-0 h-px"
@@ -202,7 +210,9 @@ export default function ProjectShowcase() {
                       </div>
                       <Image
                         src={project.image || "/placeholder.svg"}
-                        alt={`Screenshot of ${t(`projects.list.${project.id}.title`)} project`}
+                        alt={`Screenshot of ${t(
+                          `projects.list.${project.id}.title`
+                        )} project`}
                         width={1203}
                         height={753}
                         className="lg:group-hover:translsate-y-10 w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3"
@@ -244,7 +254,9 @@ export default function ProjectShowcase() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="relative flex h-fit w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]"
-                          aria-label={`View source code for ${t(`projects.list.${project.id}.title`)} on GitHub`}
+                          aria-label={`View source code for ${t(
+                            `projects.list.${project.id}.title`
+                          )} on GitHub`}
                         >
                           <Github className="size-4" aria-hidden="true" />
                           <span>{t("projects.buttons.sourceCode")}</span>
@@ -255,7 +267,9 @@ export default function ProjectShowcase() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative flex h-fit w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]"
-                        aria-label={`Visit ${t(`projects.list.${project.id}.title`)} website`}
+                        aria-label={`Visit ${t(
+                          `projects.list.${project.id}.title`
+                        )} website`}
                       >
                         <ExternalLink className="size-4" aria-hidden="true" />
                         <span>{t("projects.buttons.website")}</span>
@@ -301,7 +315,9 @@ export default function ProjectShowcase() {
                             rel="noopener noreferrer"
                             className="translate-y-px cursor-pointer rounded-full p-2 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-white/20"
                             href={project.github}
-                            aria-label={`View ${t(`projects.list.${project.id}.title`)} source code on GitHub`}
+                            aria-label={`View ${t(
+                              `projects.list.${project.id}.title`
+                            )} source code on GitHub`}
                           >
                             <Github className="size-5" aria-hidden="true" />
                           </a>
@@ -314,7 +330,11 @@ export default function ProjectShowcase() {
                         className="text-accent-foreground/85 mt-4 flex flex-col gap-y-2 text-base"
                         aria-label="Project features"
                       >
-                        {(t(`projects.list.${project.id}.features`, { returnObjects: true }) as string[])?.map((feature: string, index: number) => (
+                        {(
+                          t(`projects.list.${project.id}.features`, {
+                            returnObjects: true,
+                          }) as string[]
+                        )?.map((feature: string, index: number) => (
                           <li key={index} className="flex items-center text-sm">
                             <svg
                               width="24"
