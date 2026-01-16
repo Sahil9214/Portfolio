@@ -16,8 +16,6 @@ const Experience = () => {
 
 export default Experience;
 
-
-
 export function TimelineDemo() {
   const { t } = useTranslation();
 
@@ -29,7 +27,7 @@ export function TimelineDemo() {
           <p className="text-neutral-400 text-lg md:text-lg font-anton font-normal mb-2">
             {t("experience.current.description")}
           </p>
-
+          {/* //hello */}
           <ul className="list-disc list-inside text-neutral-400 text-xs md:text-lg font-anton font-normal mb-4">
             <li className="mt-1">
               <Trans
@@ -39,9 +37,7 @@ export function TimelineDemo() {
                 }}
               />
             </li>
-            <li className="mt-1">
-              {t("experience.current.items.item2")}
-            </li>
+            <li className="mt-1">{t("experience.current.items.item2")}</li>
             <li className="mt-1">
               <Trans
                 i18nKey="experience.current.items.item3"
@@ -120,18 +116,10 @@ export function TimelineDemo() {
             />
           </p>
           <ul className="list-disc list-inside text-neutral-400 text-xs md:text-lg font-anton font-normal">
-            <li className="mt-1">
-              {t("experience.neuralhq.items.item1")}
-            </li>
-            <li className="mt-1">
-              {t("experience.neuralhq.items.item2")}
-            </li>
-            <li className="mt-1">
-              {t("experience.neuralhq.items.item3")}
-            </li>
-            <li className="mt-1">
-              {t("experience.neuralhq.items.item4")}
-            </li>
+            <li className="mt-1">{t("experience.neuralhq.items.item1")}</li>
+            <li className="mt-1">{t("experience.neuralhq.items.item2")}</li>
+            <li className="mt-1">{t("experience.neuralhq.items.item3")}</li>
+            <li className="mt-1">{t("experience.neuralhq.items.item4")}</li>
           </ul>
           <div className="grid grid-cols-2 gap-4 mt-4">
             <a
