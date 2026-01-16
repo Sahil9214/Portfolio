@@ -26,6 +26,15 @@ export const metadata: Metadata = {
     "Frontend Developer India",
     "Freelance Web Developer",
     "Web Developer Portfolio",
+    "React Developer India",
+    "Next.js Expert",
+    "JavaScript Developer",
+    "TypeScript Developer",
+    "Node.js Developer",
+    "MongoDB Developer",
+    "Hire React Developer",
+    "Portfolio Website",
+    "Web Development Services",
   ],
   openGraph: {
     title: "Utkarsh Dev | Full Stack & Frontend Developer",
@@ -35,20 +44,22 @@ export const metadata: Metadata = {
     siteName: "Utkarsh Dev",
     images: [
       {
-        url: "https://ibb.co/S4ttx4Zy",
-        width: 800,
-        height: 800,
-        alt: "Utkarsh Singhal - Full Stack Developer",
+        url: "https://utkarsh-work.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Utkarsh Singhal - Full Stack Developer Portfolio",
       },
     ],
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Utkarsh Dev | Full Stack & Frontend Developer",
     description:
       "Explore Utkarsh's developer portfolio – React, Next.js, Node.js, MongoDB & more. Real projects. Real skills.",
-    images: ["https://ibb.co/S4ttx4Zy"],
+    images: ["https://utkarsh-work.vercel.app/og-image.png"],
+    creator: "@UtkarshSinghal",
     site: "https://utkarsh-work.vercel.app/",
   },
   icons: {
@@ -102,27 +113,88 @@ export default function RootLayout({
 
         {/* ✅ Structured Data / Schema */}
         <Script
-          id="json-ld"
+          id="json-ld-person"
           type="application/ld+json"
           strategy="afterInteractive"
         >
-          {`
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Utkarsh Singhal",
-  "url": "https://utkarsh-work.vercel.app/",
-  "sameAs": [
-    "https://linkedin.com/in/utkarsh",
-    "https://github.com/utkarsh"
-  ],
-  "jobTitle": "Full Stack Web Developer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelancer and Full-time Engineer"
-  }
-}
-          `}
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Utkarsh Singhal",
+            alternateName: "Utkarsh Dev",
+            url: "https://utkarsh-work.vercel.app/",
+            image: "https://utkarsh-work.vercel.app/og-image.png",
+            sameAs: [
+              "https://www.linkedin.com/in/utkarsh-singhal-3171b7182/",
+              "https://github.com/utkarsh",
+            ],
+            jobTitle: "Full Stack Web Developer",
+            worksFor: {
+              "@type": "Organization",
+              name: "Freelancer and Full-time Engineer",
+            },
+            knowsAbout: [
+              "React",
+              "Next.js",
+              "JavaScript",
+              "TypeScript",
+              "Node.js",
+              "MongoDB",
+              "Web Development",
+              "Full Stack Development",
+            ],
+            description:
+              "Full Stack Web Developer specializing in React, Next.js, and modern web technologies. Building scalable and high-performance web applications.",
+          })}
+        </Script>
+
+        {/* Website Schema */}
+        <Script
+          id="json-ld-website"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Utkarsh Dev Portfolio",
+            url: "https://utkarsh-work.vercel.app/",
+            description:
+              "Professional portfolio of Utkarsh Singhal - Full Stack Web Developer specializing in React, Next.js, and modern web technologies.",
+            author: {
+              "@type": "Person",
+              name: "Utkarsh Singhal",
+            },
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate:
+                  "https://utkarsh-work.vercel.app/?s={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
+          })}
+        </Script>
+
+        {/* Breadcrumb Schema */}
+        <Script
+          id="json-ld-breadcrumb"
+          type="application/ld+json"
+          strategy="afterInteractive"
+        >
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://utkarsh-work.vercel.app/",
+              },
+            ],
+          })}
         </Script>
 
         <I18nProvider>

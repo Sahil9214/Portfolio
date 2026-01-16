@@ -7,14 +7,10 @@ import { HeroSection } from "@/sections/herosection";
 import Navbar from "@/sections/navbar";
 import ProjectShowcase from "@/sections/project";
 import TechStack from "@/sections/techStack";
-import SEO from "@/utils/SEO";
-import { PersonalSEOContent } from "@/utils/homePageSeoContent";
 
 export default function Home() {
   return (
-    <LenisWrapper >
-      <SEO seo={PersonalSEOContent} />
-
+    <LenisWrapper>
       <Navbar />
       <HeroSection />
       <About />

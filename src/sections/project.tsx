@@ -363,7 +363,7 @@ export default function ProjectShowcase() {
                               <Image
                                 height="16"
                                 width="16"
-                                alt=""
+                                alt={`${tech.name} icon`}
                                 src={tech.icon || "/placeholder.svg"}
                                 aria-hidden="true"
                               />
