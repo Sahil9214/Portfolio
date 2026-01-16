@@ -2,9 +2,12 @@
 
 import CircularText from "@/components/ui/circuluartext";
 import { ScrollAnimation } from "@/components/ui/scroll-animations";
-import { DESCRIPTION, NAME } from "@/utils/constant";
+import { NAME } from "@/utils/constant";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section
       className="w-full  bg-neutral-950 relative flex flex-col items-center justify-center py-16 md:py-12"
@@ -18,13 +21,13 @@ export default function About() {
         >
           <div className="flex flex-col lg:flex-row items-start justify-between">
             <CircularText
-              text="ABOUT*ME*MORE*"
+              text={t("about.title")}
               onHover="speedUp"
               spinDuration={20}
               className="custom-class"
             />
             <h2 className="text-3xl  md:text-4xl lg:text-5xl text-neutral-200 font-anton leading-tight w-full">
-              {DESCRIPTION}
+              {t("about.description")}
             </h2>
           </div>
         </ScrollAnimation>
@@ -36,7 +39,7 @@ export default function About() {
           duration={0.6}
           delay={0.2}
         >
-          <p className="text-neutral-500 mb-3">This is me.</p>
+          <p className="text-neutral-500 mb-3">{t("about.thisIsMe")}</p>
           <div className="h-px bg-neutral-800 w-full"></div>
         </ScrollAnimation>
 
@@ -45,7 +48,7 @@ export default function About() {
           {/* Name heading */}
           <ScrollAnimation animation="fadeLeft" duration={0.6} delay={0.3}>
             <h3 className="text-3xl md:text-4xl lg:text-5xl text-neutral-200 font-medium mb-6">
-              Hi, I&apos;m {NAME}.
+              {t("about.greeting", { name: NAME })}
             </h3>
           </ScrollAnimation>
 
@@ -57,17 +60,11 @@ export default function About() {
             delay={0.4}
           >
             <p className="text-neutral-400 leading-relaxed">
-              I&lsquo;m a Full Stack Web developer dedicated to turning ideas
-              into creative solutions. I specialize in creating seamless and
-              intuitive user experiences.
+              {t("about.paragraph1")}
             </p>
 
             <p className="text-neutral-400 leading-relaxed">
-              My approach focuses on creating scalable, high-performing
-              solutions tailored to both user needs and business objectives. By
-              prioritizing performance, accessibility, and responsiveness, I
-              strive to deliver experiences that not only engage users but also
-              drive tangible results.
+              {t("about.paragraph2")}
             </p>
           </ScrollAnimation>
         </div>

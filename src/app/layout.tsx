@@ -1,4 +1,5 @@
 import { GsapProvider } from "@/context/gsapContext";
+import { I18nProvider } from "@/components/i18n-provider";
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
 import Script from "next/script";
@@ -124,7 +125,9 @@ export default function RootLayout({
           `}
         </Script>
 
-        <GsapProvider>{children}</GsapProvider>
+        <I18nProvider>
+          <GsapProvider>{children}</GsapProvider>
+        </I18nProvider>
       </body>
     </html>
   );

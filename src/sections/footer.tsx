@@ -1,6 +1,7 @@
 "use client";
 import { Mail } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 export default function Footer() {
   return (
     <div className="space-y-8">
@@ -25,6 +26,7 @@ export default function Footer() {
 }
 
 function InteractiveFooter() {
+  const { t } = useTranslation();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isHovering, setIsHovering] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -143,7 +145,7 @@ function InteractiveFooter() {
       />
       <div className="container relative z-10 py-10 flex flex-col items-center justify-center">
         <p className="text-lg text-white opacity-90 transform transition-transform duration-300 hover:scale-105">
-          Have a project in mind?
+          {t("footer.haveProject")}
         </p>
 
         <a
@@ -164,7 +166,7 @@ function InteractiveFooter() {
         </a>
 
         <p className="text-gray-400 transition-opacity duration-300 hover:opacity-100">
-          Copyright © {new Date().getFullYear()} Utkarsh
+          {t("footer.copyright", { year: new Date().getFullYear() })}
         </p>
       </div>
     </footer>

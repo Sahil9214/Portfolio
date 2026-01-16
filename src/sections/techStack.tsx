@@ -5,8 +5,11 @@ import { techStack } from "@/utils/constant";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const TechStack = () => {
+  const { t } = useTranslation();
+
   return (
     <section
       id="skills"
@@ -22,7 +25,7 @@ const TechStack = () => {
         >
           <TechStackSvg />
           <h2 className="text-xl md:text-2xl uppercase leading-none">
-            My Stack
+            {t("techStack.title")}
           </h2>
         </motion.div>
 
@@ -50,6 +53,7 @@ const CategorySection = ({
   items: any[];
   index: number;
 }) => {
+  const { t } = useTranslation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -102,7 +106,7 @@ const CategorySection = ({
     >
       <motion.div className="sm:col-span-5" variants={categoryVariants}>
         <p className="category-title text-3xl   xl:text-5xl font-anton leading-none text-muted-foreground uppercase">
-          {category}
+          {t(`techStack.categories.${category}`) || category}
         </p>
       </motion.div>
 

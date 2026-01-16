@@ -11,9 +11,11 @@ import { useState } from "react"
 import { Toaster } from "react-hot-toast"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { contactFormStore } from "@/lib/types"
+import { useTranslation } from "react-i18next"
 
 
 export default function ContactForm() {
+  const { t } = useTranslation();
   const { postContactForm } = useStore();
   const {
     register,
@@ -42,19 +44,19 @@ export default function ContactForm() {
       >
         <div className="mb-8">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-green-400 via-purple-500 to-orange-500 bg-clip-text text-transparent">
-            Get in Touch
+            {t("contact.title")}
           </h3>
-          <p className="text-gray-400 mt-2">Fill out the form below to send me a message</p>
+          <p className="text-gray-400 mt-2">{t("contact.subtitle")}</p>
         </div>
         <form className="flex flex-col space-y-6" onSubmit={handleSubmit(onSubmit)}>
           <div>
             <label htmlFor="name" className="block text-gray-300 text-sm font-medium mb-2">
-              Enter your Name
+              {t("contact.form.name")}
             </label>
             <Input
               type="text"
               id="name"
-              placeholder="Your Name"
+              placeholder={t("contact.form.namePlaceholder")}
               {...register("name")}
               required
               className="bg-gray-900/50 border-gray-700 text-gray-200 placeholder:text-gray-500 focus:border-purple-500"
@@ -62,12 +64,12 @@ export default function ContactForm() {
           </div>
           <div>
             <label htmlFor="email" className="block text-gray-300 text-sm font-medium mb-2">
-              Enter your Email
+              {t("contact.form.email")}
             </label>
             <Input
               type="email"
               id="email"
-              placeholder="Your Email"
+              placeholder={t("contact.form.emailPlaceholder")}
               {...register("email")}
               required
               className="bg-gray-900/50 border-gray-700 text-gray-200 placeholder:text-gray-500 focus:border-purple-500"
@@ -75,11 +77,11 @@ export default function ContactForm() {
           </div>
           <div>
             <label htmlFor="message" className="block text-gray-300 text-sm font-medium mb-2">
-              Enter your Message
+              {t("contact.form.message")}
             </label>
             <Textarea
               id="message"
-              placeholder="Your Message"
+              placeholder={t("contact.form.messagePlaceholder")}
               {...register("message")}
               required
 
@@ -91,7 +93,7 @@ export default function ContactForm() {
             disabled={isSubmitting}
             className="w-full bg-gradient-to-r from-purple-600 to-orange-500 hover:from-purple-700 hover:to-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2"
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
             <Send className="h-4 w-4" />
           </Button>
         </form>
@@ -112,14 +114,14 @@ export default function ContactForm() {
             <h2 className="md:text-5xl text-3xl font-bold mb-2 relative text-white">
               <span className="relative">
                 <span className="absolute -inset-1 blur-sm bg-gradient-to-r from-purple-500 to-orange-500 opacity-70 text-transparent bg-clip-text">
-                  Thanks for visiting
+                  {t("contact.thanks.title")}
                 </span>
-                Thanks for visiting
+                {t("contact.thanks.title")}
               </span>
               <div className="h-1 w-24 bg-gradient-to-r from-purple-500 to-orange-500 mx-auto my-4"></div>
               <span className="relative">
                 <span className="absolute -inset-1 blur-sm bg-gradient-to-r from-purple-500 to-orange-500 opacity-70 text-transparent bg-clip-text"></span>
-                my website
+                {t("contact.thanks.subtitle")}
               </span>
             </h2>
           </motion.div>
@@ -129,8 +131,7 @@ export default function ContactForm() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            I&apos;m always excited to connect with new people and discuss potential opportunities. Feel free to reach
-            out with any questions or ideas you might have!
+            {t("contact.thanks.description")}
           </motion.p>
           <motion.div
             className="mt-8 flex justify-center space-x-4"

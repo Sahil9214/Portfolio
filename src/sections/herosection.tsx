@@ -4,8 +4,11 @@ import { GetStartedButton } from "@/components/ui/get-started-button";
 import { useGsapScrollTrigger } from "@/hooks/useGsapScrollTrigger";
 import { EMAIL, NAME } from "@/utils/constant";
 import { BackgroundBeams } from "../components/ui/background-beam";
+import { useTranslation } from "react-i18next";
 
 export function HeroSection() {
+  const { t } = useTranslation();
+
   // GSAP animations for heading
   const headingRef = useGsapScrollTrigger<HTMLHeadingElement>(
     (element, gsap) => {
@@ -84,9 +87,11 @@ export function HeroSection() {
                 ref={headingRef}
                 className="text-5xl md:text-7xl font-bold mb-4 md:mb-6 hero-heading font-['Roboto_Flex','Roboto Flex Fallback','Roboto Flex F']"
               >
-                <span className="text-green-400">FULL STACK</span>
+                <span className="text-green-400">{t("hero.title")}</span>
                 <br />
-                <span className="text-neutral-200 ml-4">DEVELOPER</span>
+                <span className="text-neutral-200 ml-4">
+                  {t("hero.subtitle")}
+                </span>
               </h1>
 
               {/* Introduction text with GSAP animation */}
@@ -95,14 +100,11 @@ export function HeroSection() {
                 className="font-['Roboto_Flex','Roboto Flex Fallback','Roboto Flex F']"
               >
                 <p className="text-neutral-400 text-lg mb-6">
-                  Hi! I&apos;m <span className="text-neutral-200">{NAME}</span>.
-                  A creative Full Stack Web Developer with 1.5+ years of
-                  experience in building high-performance, scalable, and
-                  responsive web solutions.
+                  {t("hero.intro", { name: NAME })}
                 </p>
 
                 {/* Hire me button */}
-                <GetStartedButton name="Resume Download" />
+                <GetStartedButton name={t("hero.resumeButton")} />
               </div>
             </div>
 
@@ -112,18 +114,24 @@ export function HeroSection() {
               className="hidden md:flex md:w-[40%] flex-col items-end gap-8 mt-8 md:mt-0 stats-section"
             >
               <div className="flex flex-col items-end stat-item">
-                <span className="text-green-400 text-6xl font-bold">1.5+</span>
-                <span className="text-neutral-400">Years of Experience</span>
+                <span className="text-green-400 text-6xl font-bold">2+</span>
+                <span className="text-neutral-400">
+                  {t("hero.stats.years")}
+                </span>
               </div>
 
               <div className="flex flex-col items-end stat-item">
                 <span className="text-green-400 text-6xl font-bold">7+</span>
-                <span className="text-neutral-400">Completed Projects</span>
+                <span className="text-neutral-400">
+                  {t("hero.stats.projects")}
+                </span>
               </div>
 
               <div className="flex flex-col items-end stat-item">
                 <span className="text-green-400 text-6xl font-bold">10K+</span>
-                <span className="text-neutral-400">Hours Worked</span>
+                <span className="text-neutral-400">
+                  {t("hero.stats.hours")}
+                </span>
               </div>
             </div>
 
@@ -134,22 +142,24 @@ export function HeroSection() {
             >
               {/* Mobile stats content (same as original) */}
               <div className="flex flex-col items-center stat-item">
-                <span className="text-green-400 text-3xl font-bold">1.5+</span>
+                <span className="text-green-400 text-3xl font-bold">2+</span>
                 <span className="text-neutral-400 text-xs">
-                  Years of Experience
+                  {t("hero.stats.years")}
                 </span>
               </div>
 
               <div className="flex flex-col items-center stat-item">
                 <span className="text-green-400 text-3xl font-bold">7+</span>
                 <span className="text-neutral-400 text-xs">
-                  Completed Projects
+                  {t("hero.stats.projects")}
                 </span>
               </div>
 
               <div className="flex flex-col items-center stat-item">
                 <span className="text-green-400 text-3xl font-bold">10K+</span>
-                <span className="text-neutral-400 text-xs">Hours Worked</span>
+                <span className="text-neutral-400 text-xs">
+                  {t("hero.stats.hours")}
+                </span>
               </div>
             </div>
           </div>

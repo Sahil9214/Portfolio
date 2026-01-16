@@ -7,8 +7,10 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectShowcase() {
+  const { t } = useTranslation();
   const [activeProject, setActiveProject] = useState(projects[0].id);
   const sectionRef = useRef<HTMLDivElement>(null);
   const projectRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -144,7 +146,7 @@ export default function ProjectShowcase() {
       <div className="header flex items-center gap-4 ">
         <TechStackSvg />
         <h2 className="text-xl md:text-2xl uppercase leading-none">
-          My Curated Work(Projects)
+          {t("projects.title")}
         </h2>
       </div>
       <div className="relative mx-auto mt-10 flex w-full flex-col lg:flex-row">
@@ -174,7 +176,7 @@ export default function ProjectShowcase() {
                     className="relative cursor-pointer overflow-hidden rounded-2xl border border-white/15 bg-[#f2f2f20c] p-1.5 shadow-2xl md:pointer-events-auto lg:h-[560px] lg:rounded-3xl lg:p-2"
                     href={project.link}
                     rel="noreferrer"
-                    aria-label={`View ${project.title} project`}
+                    aria-label={`View ${t(`projects.list.${project.id}.title`)} project`}
                   >
                     <div
                       className="absolute inset-x-0 top-0 h-px"
@@ -194,13 +196,13 @@ export default function ProjectShowcase() {
                         className={`hidden w-full flex-row items-center justify-between px-12 py-8 lg:flex ${colorClasses.text}`}
                       >
                         <h3 className="max-w-[90%] text-2xl">
-                          {project.description}
+                          {t(`projects.list.${project.id}.description`)}
                         </h3>
                         <ArrowRight className="size-6" aria-hidden="true" />
                       </div>
                       <Image
                         src={project.image || "/placeholder.svg"}
-                        alt={`Screenshot of ${project.title} project`}
+                        alt={`Screenshot of ${t(`projects.list.${project.id}.title`)} project`}
                         width={1203}
                         height={753}
                         className="lg:group-hover:translsate-y-10 w-full max-w-[85%] translate-y-5 -rotate-3 rounded-t-lg border-[1.5px] border-white/20 transition-all duration-300 will-change-transform lg:block lg:rotate-0 lg:group-hover:scale-[1.08] lg:group-hover:-rotate-3"
@@ -215,7 +217,7 @@ export default function ProjectShowcase() {
                   <div className="mt-6 mb-24 flex flex-col px-2 lg:hidden">
                     <div className="flex items-center">
                       <h2 className="my-auto line-clamp-1 text-lg font-bold">
-                        {project.title}
+                        {t(`projects.list.${project.id}.title`)}
                       </h2>
                       <div
                         aria-hidden="true"
@@ -223,7 +225,7 @@ export default function ProjectShowcase() {
                       ></div>
                     </div>
                     <p className="text-muted-foreground mt-2 text-sm">
-                      {project.fullDescription}
+                      {t(`projects.list.${project.id}.fullDescription`)}
                     </p>
                     <div className="my-4 flex max-w-fit flex-wrap items-center gap-1">
                       {project.technologies.slice(0, 10).map((tech) => (
@@ -242,10 +244,10 @@ export default function ProjectShowcase() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="relative flex h-fit w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]"
-                          aria-label={`View source code for ${project.title} on GitHub`}
+                          aria-label={`View source code for ${t(`projects.list.${project.id}.title`)} on GitHub`}
                         >
                           <Github className="size-4" aria-hidden="true" />
-                          <span>Source code</span>
+                          <span>{t("projects.buttons.sourceCode")}</span>
                         </a>
                       )}
                       <a
@@ -253,10 +255,10 @@ export default function ProjectShowcase() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="relative flex h-fit w-1/2 items-center justify-center gap-2 rounded-xl bg-neutral-900 px-5 py-2 shadow-[inset_0_2px_10px_#ffffff1f]"
-                        aria-label={`Visit ${project.title} website`}
+                        aria-label={`Visit ${t(`projects.list.${project.id}.title`)} website`}
                       >
                         <ExternalLink className="size-4" aria-hidden="true" />
-                        <span>Website</span>
+                        <span>{t("projects.buttons.website")}</span>
                       </a>
                     </div>
                   </div>
@@ -291,7 +293,7 @@ export default function ProjectShowcase() {
                     <div className="flex flex-col items-start lg:h-[500px]">
                       <div className="flex items-center gap-3">
                         <h3 className="text-foreground text-2xl font-bold">
-                          {project.title}
+                          {t(`projects.list.${project.id}.title`)}
                         </h3>
                         {project.github && (
                           <a
@@ -299,20 +301,20 @@ export default function ProjectShowcase() {
                             rel="noopener noreferrer"
                             className="translate-y-px cursor-pointer rounded-full p-2 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-white/20"
                             href={project.github}
-                            aria-label={`View ${project.title} source code on GitHub`}
+                            aria-label={`View ${t(`projects.list.${project.id}.title`)} source code on GitHub`}
                           >
                             <Github className="size-5" aria-hidden="true" />
                           </a>
                         )}
                       </div>
                       <p className="text-muted-foreground my-2 text-base font-light">
-                        {project.fullDescription}
+                        {t(`projects.list.${project.id}.fullDescription`)}
                       </p>
                       <ul
                         className="text-accent-foreground/85 mt-4 flex flex-col gap-y-2 text-base"
                         aria-label="Project features"
                       >
-                        {project.features.map((feature, index) => (
+                        {t(`projects.list.${project.id}.features`, { returnObjects: true })?.map((feature: string, index: number) => (
                           <li key={index} className="flex items-center text-sm">
                             <svg
                               width="24"
@@ -364,7 +366,7 @@ export default function ProjectShowcase() {
         className="mt-10 toolTip flex justify-center gap-2 text-neutral-300 transition-colors hover:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-white/20 rounded-md md:mt-16"
         aria-label="See more projects"
       >
-        <span>See more projects</span>
+        <span>{t("projects.seeMore")}</span>
         <div className="rounded-full bg-white/5 p-0.5 backdrop-blur-xs">
           <svg
             xmlns="http://www.w3.org/2000/svg"

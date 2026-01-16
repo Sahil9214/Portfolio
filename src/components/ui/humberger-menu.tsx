@@ -3,8 +3,10 @@
 import { useMobile } from "@/hooks/use-mobile";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export function HamburgerMenu() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useMobile(1024);
 
@@ -104,7 +106,7 @@ export function HamburgerMenu() {
               <div className="flex gap-10 lg:justify-between max-lg:flex-col">
                 {/* Social Section */}
                 <div className="max-lg:order-2">
-                  <p className="text-neutral-400 mb-5">SOCIAL</p>
+                  <p className="text-neutral-400 mb-5">{t("menu.social")}</p>
                   <ul className="space-y-3">
                     <li>
                       <a
@@ -142,7 +144,7 @@ export function HamburgerMenu() {
 
                 {/* Menu Section */}
                 <div>
-                  <p className="text-neutral-400 mb-5">MENU</p>
+                  <p className="text-neutral-400 mb-5">{t("menu.menu")}</p>
                   <motion.ul
                     className="space-y-3"
                     initial="initial"
@@ -178,7 +180,7 @@ export function HamburgerMenu() {
                             <path d="M19 5L5 19"></path>
                           </svg>
                         </span>
-                        Home
+                        {t("menu.home")}
                       </a>
                     </motion.li>
                     <motion.li variants={menuItemVariants}>
@@ -203,7 +205,7 @@ export function HamburgerMenu() {
                             <path d="M19 5L5 19"></path>
                           </svg>
                         </span>
-                        About
+                        {t("menu.about")}
                       </a>
                     </motion.li>
                     <motion.li variants={menuItemVariants}>
@@ -228,7 +230,7 @@ export function HamburgerMenu() {
                             <path d="M19 5L5 19"></path>
                           </svg>
                         </span>
-                        Projects
+                        {t("menu.projects")}
                       </a>
                     </motion.li>
                     <motion.li variants={menuItemVariants}>
@@ -253,7 +255,7 @@ export function HamburgerMenu() {
                             <path d="M19 5L5 19"></path>
                           </svg>
                         </span>
-                        Contact
+                        {t("menu.contact")}
                       </a>
                     </motion.li>
                   </motion.ul>

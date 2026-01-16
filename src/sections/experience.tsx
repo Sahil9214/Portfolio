@@ -1,6 +1,7 @@
 "use client";
 import { Timeline } from "@/components/ui/timeline";
 import Image from "next/image";
+import { useTranslation, Trans } from "react-i18next";
 
 const Experience = () => {
   return (
@@ -18,42 +19,52 @@ export default Experience;
 
 
 export function TimelineDemo() {
+  const { t } = useTranslation();
+
   const data = [
     {
-      title: "2025 - Present",
+      title: t("experience.current.title"),
       content: (
         <div>
           <p className="text-neutral-400 text-lg md:text-lg font-anton font-normal mb-2">
-            Currently working on high-impact, large-scale projects that push
-            the boundaries of SEO, scalability, and modern frontend architecture.
+            {t("experience.current.description")}
           </p>
 
           <ul className="list-disc list-inside text-neutral-400 text-xs md:text-lg font-anton font-normal mb-4">
             <li className="mt-1">
-              <span className="text-white">GetProjects.ai</span> — Architected and built a
-              fully dynamic, <span className="text-white"> SEO-friendly</span> platform with 2000+ unique pages**, rendered
-              through {"  "} <span className="text-white">Next.js’s</span> dynamic routing & metadata system. Optimized for
-              lightning-fast crawl & indexing by Google.
+              <Trans
+                i18nKey="experience.current.items.item1"
+                components={{
+                  strong: <span className="text-white" />,
+                }}
+              />
             </li>
             <li className="mt-1">
-              Integrated advanced structured data & sitemaps to improve organic
-              visibility. Entire website is crawlable and indexable with dynamic
-              page generation and robust SEO strategies.
+              {t("experience.current.items.item2")}
             </li>
             <li className="mt-1">
-              Contributed to <span className="text-white">Engineerbabu.com</span> website improvements, focusing on
-              UX/UI performance, modular architecture, and clean componentization.
+              <Trans
+                i18nKey="experience.current.items.item3"
+                components={{
+                  strong: <span className="text-white" />,
+                }}
+              />
             </li>
             <li className="mt-1">
-              Built a <span className="text-white">Simba Beer Brand Internal Dashboard</span> leveraging
-              <span className="text-white"> Supabase</span>, <span className="text-white">Next.js API routes</span>,
-              <span className="text-white"> AWS Textract</span> for OCR, and
-              <span className="text-white"> shadcn/ui</span> for a sleek admin interface.
+              <Trans
+                i18nKey="experience.current.items.item4"
+                components={{
+                  strong: <span className="text-white" />,
+                }}
+              />
             </li>
             <li className="mt-1">
-              Implemented <span className="text-white">user authentication, data management, and secure file
-                handling</span> using Supabase. Scalable, role-based access system built
-              with server components and modern React patterns.
+              <Trans
+                i18nKey="experience.current.items.item5"
+                components={{
+                  strong: <span className="text-white" />,
+                }}
+              />
             </li>
           </ul>
 
@@ -89,28 +100,37 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "2024 - 2025",
+      title: t("experience.neuralhq.title"),
       content: (
         <div>
           <p className="text-neutral-400 text-lg md:text-lg font-anton font-normal">
-            Developed and launched multiple products at{" "}
-            <span className="text-white">NeuralHQ</span>, including:
+            <Trans
+              i18nKey="experience.neuralhq.description"
+              components={{
+                strong: <span className="text-white" />,
+              }}
+            />
           </p>
           <p className="text-neutral-400 text-lg md:text-lg font-anton font-normal">
-            Role: <span className="text-white">Full Stack Developer</span>
+            <Trans
+              i18nKey="experience.neuralhq.role"
+              components={{
+                strong: <span className="text-white" />,
+              }}
+            />
           </p>
           <ul className="list-disc list-inside text-neutral-400 text-xs md:text-lg font-anton font-normal">
             <li className="mt-1">
-              Designed and built the company&apos;s website
+              {t("experience.neuralhq.items.item1")}
             </li>
             <li className="mt-1">
-              Developed an AI-powered customer support platform
+              {t("experience.neuralhq.items.item2")}
             </li>
             <li className="mt-1">
-              Created AI-powered catalogue builder
+              {t("experience.neuralhq.items.item3")}
             </li>
             <li className="mt-1">
-              Built mobile applications for KDMS, Karnataka Government
+              {t("experience.neuralhq.items.item4")}
             </li>
           </ul>
           <div className="grid grid-cols-2 gap-4 mt-4">
@@ -145,22 +165,17 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "Early 2023",
+      title: t("experience.masai.title"),
       content: (
         <div>
           <p className="text-neutral-400 text-lg md:text-lg font-anton font-normal mb-8">
-            Joined Masai School’s Full Stack Web Development program, where I
-            honed my skills in the MERN (MongoDB, Express, React, Node.js)
-            stack.
+            {t("experience.masai.description1")}
           </p>
           <p className="text-neutral-400 text-lg md:text-lg font-anton font-normal mb-8">
-            Gained hands-on experience in building scalable web applications,
-            RESTful APIs, and interactive UIs. Strengthened problem-solving
-            abilities through data structures and algorithms.
+            {t("experience.masai.description2")}
           </p>
           <p className="text-neutral-400 text-lg md:text-lg font-anton font-normal mb-8">
-            Here are some examples of the projects and UI components I built
-            during my learning journey.
+            {t("experience.masai.description3")}
           </p>
           <div className="grid grid-cols-2 gap-4">
             <a

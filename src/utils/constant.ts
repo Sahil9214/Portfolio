@@ -59,27 +59,42 @@ export const techStack = {
       name: "Node.js",
       logo: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png",
     },
-    { name: "Nest.js", logo: "https://img.icons8.com/?size=288&id=9ESZMOeUioJS&format=png" },
+    {
+      name: "Nest.js",
+      logo: "https://img.icons8.com/?size=288&id=9ESZMOeUioJS&format=png",
+    },
     {
       name: "Express.js",
       logo: "https://img.icons8.com/?size=200&id=2ZOaTclOqD4q&format=png",
     },
   ],
   database: [
-    { name: "MySQL", logo: "https://img.icons8.com/?size=200&id=QeIg9siFKGgp&format=png" },
+    {
+      name: "MySQL",
+      logo: "https://img.icons8.com/?size=200&id=QeIg9siFKGgp&format=png",
+    },
     {
       name: "PostgreSQL",
       logo: "https://img.icons8.com/?size=288&id=38561&format=png",
     },
-    { name: "MongoDB", logo: "https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png" },
-    { name: "Supabase", logo: "https://img.icons8.com/?size=288&id=grZaE9tjqDyr&format=png" }
+    {
+      name: "MongoDB",
+      logo: "https://img.icons8.com/?size=100&id=8rKdRqZFLurS&format=png",
+    },
+    {
+      name: "Supabase",
+      logo: "https://img.icons8.com/?size=288&id=grZaE9tjqDyr&format=png",
+    },
   ],
   tools: [
     {
       name: "Git",
       logo: "https://img.icons8.com/?size=288&id=20906&format=png",
     },
-    { name: "Docker", logo: "https://img.icons8.com/?size=200&id=cdYUlRaag9G9&format=png" },
+    {
+      name: "Docker",
+      logo: "https://img.icons8.com/?size=200&id=cdYUlRaag9G9&format=png",
+    },
     {
       name: "AWS",
       logo: "https://img.icons8.com/?size=288&id=33039&format=png",
@@ -91,12 +106,15 @@ export const projects = [
   {
     id: "simba-analytics",
     title: "Simba Analytics Dashboard & Seller App",
-    description: "Interactive analytics dashboard & seller app using Supabase, AWS Textract, and Next.js.",
+    description:
+      "Interactive analytics dashboard & seller app using Supabase, AWS Textract, and Next.js.",
 
-    fullDescription: "Built a scalable analytics platform for Simba Beer. Extracted company data from PDFs & Excel using AWS Textract, managed it with Supabase, and visualized insights via Recharts. Includes a seller mobile app to track targets in real-time.",
+    fullDescription:
+      "Built a scalable analytics platform for Simba Beer. Extracted company data from PDFs & Excel using AWS Textract, managed it with Supabase, and visualized insights via Recharts. Includes a seller mobile app to track targets in real-time.",
 
     color: "orange",
-    gradient: "linear-gradient(188.62deg, #4B2500 49.9%, #A0522D 81.7%, #FF8C00 93.88%, #FFD580 113.5%)",
+    gradient:
+      "linear-gradient(188.62deg, #4B2500 49.9%, #A0522D 81.7%, #FF8C00 93.88%, #FFD580 113.5%)",
     shadow: "0 0 30px #FF8C00",
     image: "/simba.webp",
     link: "https://simbabeer.com/",
@@ -106,32 +124,54 @@ export const projects = [
       "Data extraction from PDFs & Excel via AWS Textract",
       "Managed securely in Supabase",
       "Dashboard with Donut, Line & Competition charts (Recharts)",
-      "Seller mobile app for real-time target tracking"
+      "Seller mobile app for real-time target tracking",
     ],
     alt: "Simba Analytics Dashboard screenshot",
     technologies: [
-      { name: "Next.js", icon: "https://img.icons8.com/?size=200&id=gwR0hbBi5JeZ&format=png&color=FFFFFF" },
-      { name: "React", icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png" },
-      { name: "Tailwind CSS", icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png" },
-      { name: "TypeScript", icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png" },
-      { name: "Supabase", icon: "https://img.icons8.com/?size=288&id=grZaE9tjqDyr&format=png" },
-      { name: "AWS", icon: "https://img.icons8.com/?size=288&id=33039&format=png" },
-      { name: "Recharts", icon: "https://img.icons8.com/?size=200&id=2dT788URbae8&format=png" }
-    ]
-  }
-  ,
-
+      {
+        name: "Next.js",
+        icon: "https://img.icons8.com/?size=200&id=gwR0hbBi5JeZ&format=png&color=FFFFFF",
+      },
+      {
+        name: "React",
+        icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png",
+      },
+      {
+        name: "TypeScript",
+        icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png",
+      },
+      {
+        name: "Supabase",
+        icon: "https://img.icons8.com/?size=288&id=grZaE9tjqDyr&format=png",
+      },
+      {
+        name: "AWS",
+        icon: "https://img.icons8.com/?size=288&id=33039&format=png",
+      },
+      {
+        name: "Recharts",
+        icon: "https://img.icons8.com/?size=200&id=2dT788URbae8&format=png",
+      },
+    ],
+  },
   {
     id: "getprojects-ai",
     title: "GetProjects.ai - Dynamic Project Platform",
     // Short description ab aur bhi punchy hai
-    description: "Built a Next.js app with 2,000+ dynamic SEO pages in 7 days, achieving a 92+ Lighthouse score.",
+    description:
+      "Built a Next.js app with 2,000+ dynamic SEO pages in 7 days, achieving a 92+ Lighthouse score.",
 
     // fullDescription ab seedha skills aur results pe focus karta hai
-    fullDescription: "Delivered this full-stack application from concept to deployment in a 7-day sprint. The core architecture generates over 2,000 dynamic, SEO-optimized pages using nested routing. Focused heavily on performance optimization to achieve 92+ Lighthouse scores on mobile and desktop, while also integrating a custom chatbot via API.",
+    fullDescription:
+      "Delivered this full-stack application from concept to deployment in a 7-day sprint. The core architecture generates over 2,000 dynamic, SEO-optimized pages using nested routing. Focused heavily on performance optimization to achieve 92+ Lighthouse scores on mobile and desktop, while also integrating a custom chatbot via API.",
 
     color: "purple",
-    gradient: "linear-gradient(188.62deg, #2E1065 49.9%, #4C1D95 81.7%, #7C3AED 93.88%, #A78BFA 113.5%)",
+    gradient:
+      "linear-gradient(188.62deg, #2E1065 49.9%, #4C1D95 81.7%, #7C3AED 93.88%, #A78BFA 113.5%)",
     shadow: "0 0 30px #7C3AED",
     image: "/getProjects.webp",
     link: "https://getproject.ai",
@@ -143,35 +183,35 @@ export const projects = [
       "Complex nested dynamic routing for intuitive navigation.",
       "Optimized for performance with 92+ Lighthouse scores.",
       "Rapid 7-day development cycle from scratch to launch.",
-      "Integrated chatbot for real-time user interaction."
+      "Integrated chatbot for real-time user interaction.",
     ],
     alt: "GetProjects.ai platform screenshot",
     technologies: [
       {
         name: "Next.js",
-        icon: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png"
+        icon: "https://img.icons8.com/?size=288&id=yUdJlcKanVbh&format=png",
       },
       {
         name: "React",
-        icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png"
+        icon: "https://img.icons8.com/?size=200&id=asWSSTBrDlTW&format=png",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png"
+        icon: "https://img.icons8.com/?size=288&id=CIAZz2CYc6Kc&format=png",
       },
       {
         name: "TypeScript",
-        icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png"
+        icon: "https://img.icons8.com/?size=200&id=nCj4PvnCO0tZ&format=png",
       },
       {
         name: "Node.js",
-        icon: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png"
+        icon: "https://img.icons8.com/?size=200&id=hsPbhkOH4FMe&format=png",
       },
       {
         name: "Vercel",
-        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fvercel.svg&w=48&q=75"
-      }
-    ]
+        icon: "https://www.me.toinfinite.dev/_next/image?url=%2Flogo%2Fvercel.svg&w=48&q=75",
+      },
+    ],
   },
   {
     id: "neuralhq",
@@ -213,25 +253,28 @@ export const projects = [
     ],
   },
   {
-    id: "booking-clone",
-    title: "Booking.com Clone",
+    id: "shule-direct",
+    title: "Shule Direct Project",
     description:
-      "A feature-rich booking platform built collaboratively with a team of four.",
+      "An education-focused platform designed for students, teachers, and parents with interactive learning and social features.",
     fullDescription:
-      "Developed a functional clone of Booking.com with real-time booking features, interactive UI, and a smooth user experience.",
+      "Shule Direct is an all-in-one education platform connecting students, teachers, and parents through a role-based system. It offers features like following and unfollowing teachers, real-time chat similar to Unacademy, teacher ratings, and editable student profiles. Students can engage with top-rated teachers via messaging, while parents can easily track and monitor academic progress. The platform is designed with a strong focus on performance, usability, and a seamless learning experience.",
     color: "emerald",
     gradient:
       "linear-gradient(188.62deg, #083926 49.9%, #059669 81.7%, #34D399 93.88%, #F9D793 113.5%)",
     shadow: "0 0 30px #059669",
-    image: "/booking.png",
-    link: "https://mbooking-beta.vercel.app/",
-    github: "https://github.com/Subham0629/Booking.com",
+    image: "/shule-direct.png",
+    link: "https://www.shuledirect.co.tz/",
+    github: "",
     features: [
-      "Collaborated in a team of four developers.",
-      "Implemented real-time search and booking.",
-      "Optimized for performance and usability.",
+      "Role-based access for students, teachers, and parents.",
+      "Follow and unfollow teachers with rating system.",
+      "Real-time chat functionality similar to Unacademy.",
+      "Student profile editing and personalized experience.",
+      "Display of top-rated teachers for better discovery.",
+      "Parent access for monitoring student engagement.",
     ],
-    alt: "Booking.com Clone website image",
+    alt: "Shule Direct education platform website image",
     technologies: [
       {
         name: "Next.js",
@@ -259,6 +302,7 @@ export const projects = [
       },
     ],
   },
+
   // {
   //   id: "linkforge",
   //   title: "LinkCut – Secure URL Shortener",
