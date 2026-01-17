@@ -1,8 +1,7 @@
-@import "tailwindcss";
 @import "tw-animate-css";
 @import "./styles/circuluartext.css";
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @import "lenis/dist/lenis.css";
+@import "tailwindcss";
 :root {
   --font-roboto-flex: "Roboto Flex", "Roboto Flex Fallback";
 }
