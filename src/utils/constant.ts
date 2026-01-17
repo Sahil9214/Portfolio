@@ -968,4 +968,130 @@ export const getVoiceCommands = (): VoiceCommand[] => [
     keywords: getAllKeywordsForSection("home"),
     action: () => window.scrollTo({ top: 0, behavior: "smooth" }),
   },
+  // Project-specific navigation
+  {
+    keywords: [
+      "simba",
+      "simba analytics",
+      "simba project",
+      "simba pe jao",
+      "simba pe chalo",
+      "simba dikhao",
+      "go to simba",
+      "show simba",
+      "open simba",
+      "beer brand",
+      "whiskey",
+    ],
+    action: () => {
+      // First scroll to projects section, then to specific project
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          const projectElement = document.getElementById(
+            "project-simba-analytics"
+          );
+          if (projectElement) {
+            projectElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        }, 300);
+      }
+    },
+  },
+  {
+    keywords: [
+      "getprojects",
+      "getprojects ai",
+      "getprojects project",
+      "getprojects pe jao",
+      "getprojects pe chalo",
+      "getprojects dikhao",
+      "go to getprojects",
+      "show getprojects",
+      "open getprojects",
+      "get projects",
+      "get projects ai",
+    ],
+    action: () => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          const projectElement = document.getElementById(
+            "project-getprojects-ai"
+          );
+          if (projectElement) {
+            projectElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        }, 300);
+      }
+    },
+  },
+  {
+    keywords: [
+      "neuralhq",
+      "neural hq",
+      "neuralhq project",
+      "neuralhq pe jao",
+      "neuralhq pe chalo",
+      "neuralhq dikhao",
+      "go to neuralhq",
+      "show neuralhq",
+      "open neuralhq",
+      "neural hq project",
+    ],
+    action: () => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          const projectElement = document.getElementById("project-neuralhq");
+          if (projectElement) {
+            projectElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        }, 300);
+      }
+    },
+  },
+  {
+    keywords: [
+      "shule",
+      "shule direct",
+      "shule project",
+      "shule pe jao",
+      "shule pe chalo",
+      "shule dikhao",
+      "go to shule",
+      "show shule",
+      "open shule",
+      "shule direct project",
+    ],
+    action: () => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          const projectElement = document.getElementById(
+            "project-shule-direct"
+          );
+          if (projectElement) {
+            projectElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        }, 300);
+      }
+    },
+  },
 ];

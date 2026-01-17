@@ -137,8 +137,8 @@ export default function Home() {
         {/* TRANSCRIPT */}
         {transcript && (
           <div
-            className="fixed right-4 bottom-24 max-w-xs rounded-lg bg-black/80
-            text-white py-3 px-6 text-sm backdrop-blur-md border border-white/20"
+            className="fixed right-4 bottom-24  rounded-lg bg-black/80
+            text-white p-3 text-sm backdrop-blur-md border border-white/20 truncate max-w-[300px] min-w-[150px]"
           >
             <div className="flex justify-between items-center ">
               <p className="font-semibold mb-1">You said:</p>
