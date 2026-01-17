@@ -932,43 +932,42 @@ export const getAllKeywordsForSection = (
 };
 
 // Voice Commands Configuration
+// IMPORTANT: Project-specific commands must come BEFORE general section commands
+// to avoid confusion (e.g., "get projects" should match getprojects-ai, not projects section)
 export const getVoiceCommands = (): VoiceCommand[] => [
+  // Project-specific navigation (check these FIRST)
   {
-    keywords: getAllKeywordsForSection("about"),
-    action: () =>
-      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }),
+    keywords: [
+      "getprojects",
+      "getprojects ai",
+      "getprojects project",
+      "getprojects pe jao",
+      "getprojects pe chalo",
+      "getprojects dikhao",
+      "go to getprojects",
+      "show getprojects",
+      "open getprojects",
+      "get projects",
+      "get projects ai",
+    ],
+    action: () => {
+      const projectsSection = document.getElementById("projects");
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => {
+          const projectElement = document.getElementById(
+            "project-getprojects-ai"
+          );
+          if (projectElement) {
+            projectElement.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }
+        }, 300);
+      }
+    },
   },
-  {
-    keywords: getAllKeywordsForSection("projects"),
-    action: () =>
-      document
-        .getElementById("projects")
-        ?.scrollIntoView({ behavior: "smooth" }),
-  },
-  {
-    keywords: getAllKeywordsForSection("experience"),
-    action: () =>
-      document
-        .getElementById("experience")
-        ?.scrollIntoView({ behavior: "smooth" }),
-  },
-  {
-    keywords: getAllKeywordsForSection("tech"),
-    action: () =>
-      document.getElementById("tech")?.scrollIntoView({ behavior: "smooth" }),
-  },
-  {
-    keywords: getAllKeywordsForSection("contact"),
-    action: () =>
-      document
-        .getElementById("contact")
-        ?.scrollIntoView({ behavior: "smooth" }),
-  },
-  {
-    keywords: getAllKeywordsForSection("home"),
-    action: () => window.scrollTo({ top: 0, behavior: "smooth" }),
-  },
-  // Project-specific navigation
   {
     keywords: [
       "simba",
@@ -991,38 +990,6 @@ export const getVoiceCommands = (): VoiceCommand[] => [
         setTimeout(() => {
           const projectElement = document.getElementById(
             "project-simba-analytics"
-          );
-          if (projectElement) {
-            projectElement.scrollIntoView({
-              behavior: "smooth",
-              block: "center",
-            });
-          }
-        }, 300);
-      }
-    },
-  },
-  {
-    keywords: [
-      "getprojects",
-      "getprojects ai",
-      "getprojects project",
-      "getprojects pe jao",
-      "getprojects pe chalo",
-      "getprojects dikhao",
-      "go to getprojects",
-      "show getprojects",
-      "open getprojects",
-      "get projects",
-      "get projects ai",
-    ],
-    action: () => {
-      const projectsSection = document.getElementById("projects");
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: "smooth" });
-        setTimeout(() => {
-          const projectElement = document.getElementById(
-            "project-getprojects-ai"
           );
           if (projectElement) {
             projectElement.scrollIntoView({
@@ -1075,6 +1042,16 @@ export const getVoiceCommands = (): VoiceCommand[] => [
       "show shule",
       "open shule",
       "shule direct project",
+      "sholay",
+      "jhule",
+      "shole",
+      "sole",
+      "school",
+      "shoal",
+      "shool",
+      "shul",
+      "shool direct",
+      "school direct",
     ],
     action: () => {
       const projectsSection = document.getElementById("projects");
@@ -1093,5 +1070,41 @@ export const getVoiceCommands = (): VoiceCommand[] => [
         }, 300);
       }
     },
+  },
+  // General section navigation (check these AFTER project-specific commands)
+  {
+    keywords: getAllKeywordsForSection("about"),
+    action: () =>
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" }),
+  },
+  {
+    keywords: getAllKeywordsForSection("projects"),
+    action: () =>
+      document
+        .getElementById("projects")
+        ?.scrollIntoView({ behavior: "smooth" }),
+  },
+  {
+    keywords: getAllKeywordsForSection("experience"),
+    action: () =>
+      document
+        .getElementById("experience")
+        ?.scrollIntoView({ behavior: "smooth" }),
+  },
+  {
+    keywords: getAllKeywordsForSection("tech"),
+    action: () =>
+      document.getElementById("tech")?.scrollIntoView({ behavior: "smooth" }),
+  },
+  {
+    keywords: getAllKeywordsForSection("contact"),
+    action: () =>
+      document
+        .getElementById("contact")
+        ?.scrollIntoView({ behavior: "smooth" }),
+  },
+  {
+    keywords: getAllKeywordsForSection("home"),
+    action: () => window.scrollTo({ top: 0, behavior: "smooth" }),
   },
 ];

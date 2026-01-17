@@ -29,6 +29,7 @@ export default function Home() {
   const recognitionRef = useRef<any>(null);
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -48,6 +49,7 @@ export default function Home() {
     recognition.onstart = () => {
       setIsListening(true);
       setTranscript("");
+      setError("");
     };
 
     recognition.onend = () => {
@@ -68,14 +70,51 @@ export default function Home() {
   }, []);
 
   const handleSpeechCommand = (speech: string) => {
-    const text = speech.toLowerCase();
+    const text = speech.toLowerCase().trim();
     const commands = getVoiceCommands();
+    let matched = false;
 
+    // Improved matching: check for exact matches first, then partial matches
     for (const command of commands) {
-      if (command.keywords.some((word) => text.includes(word))) {
+      // Check for exact keyword match
+      const exactMatch = command.keywords.some((keyword) => {
+        const lowerKeyword = keyword.toLowerCase().trim();
+        return text === lowerKeyword || text.includes(lowerKeyword);
+      });
+
+      // Also check if any keyword is contained in the text (for phrases)
+      const partialMatch = command.keywords.some((keyword) => {
+        const lowerKeyword = keyword.toLowerCase().trim();
+        // For single words, check if they match or are very similar
+        if (lowerKeyword.split(" ").length === 1) {
+          return (
+            text === lowerKeyword ||
+            text.includes(lowerKeyword) ||
+            lowerKeyword.includes(text) ||
+            // Fuzzy matching for common mispronunciations
+            (text.length > 2 &&
+              lowerKeyword.length > 2 &&
+              (text.startsWith(lowerKeyword.substring(0, 3)) ||
+                lowerKeyword.startsWith(text.substring(0, 3))))
+          );
+        }
+        // For phrases, check if keyword is in text
+        return text.includes(lowerKeyword);
+      });
+
+      if (exactMatch || partialMatch) {
         command.action();
+        matched = true;
+        setError("");
         return;
       }
+    }
+
+    // If no command matched, show error
+    if (!matched) {
+      setError(`Command not recognized: "${speech}"`);
+      // Auto-hide error after 3 seconds
+      setTimeout(() => setError(""), 3000);
     }
   };
 
@@ -137,17 +176,40 @@ export default function Home() {
         {/* TRANSCRIPT */}
         {transcript && (
           <div
-            className="fixed right-4 bottom-24  rounded-lg bg-black/80
-            text-white p-3 text-sm backdrop-blur-md border border-white/20 truncate max-w-[300px] min-w-[150px]"
+            className="fixed right-4 bottom-24 rounded-lg bg-black/80
+            text-white p-3 text-sm backdrop-blur-md border border-white/20 max-w-[300px] min-w-[150px]"
           >
             <div className="flex justify-between items-center ">
               <p className="font-semibold mb-1">You said:</p>
               <X
                 className="w-4 h-4 text-white cursor-pointer"
-                onClick={() => setTranscript("")}
+                onClick={() => {
+                  setTranscript("");
+                  setError("");
+                }}
               />
             </div>
-            <p>{transcript}</p>
+            <p className="break-words">{transcript}</p>
+          </div>
+        )}
+
+        {/* ERROR MESSAGE */}
+        {error && (
+          <div
+            className="fixed right-4 bottom-24 rounded-lg bg-red-500/90
+            text-white p-3 text-sm backdrop-blur-md border border-red-400/40 max-w-[300px] min-w-[150px] shadow-lg animate-in fade-in slide-in-from-bottom-2"
+            style={{
+              marginBottom: transcript ? "80px" : "0px",
+            }}
+          >
+            <div className="flex justify-between items-center mb-1">
+              <p className="font-semibold text-red-100">⚠️ Command not found</p>
+              <X
+                className="w-4 h-4 text-white cursor-pointer"
+                onClick={() => setError("")}
+              />
+            </div>
+            <p className="break-words text-red-50">{error}</p>
           </div>
         )}
       </LenisWrapper>
