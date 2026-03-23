@@ -158,7 +158,7 @@ export default function Home() {
         <Footer />
 
         {/* MIC BUTTON */}
-        <div
+        {/* <div
           onClick={toggleMic}
           className={`fixed right-4 bottom-10 z-50 cursor-pointer rounded-full p-3
           bg-white/10 backdrop-blur-md border border-white/20
@@ -171,7 +171,7 @@ export default function Home() {
           <Mic
             className={`w-6 h-6 ${isListening ? "text-red-400" : "text-white"}`}
           />
-        </div>
+        </div> */}
 
         {/* TRANSCRIPT */}
         {transcript && (
